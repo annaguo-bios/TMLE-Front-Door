@@ -1,0 +1,13 @@
+## For the binary mediator
+Rscript compute_truth.R 4-truth-binary.R 4-dgp-binary.R 4-truth-binary.Rdata 100000
+
+
+## For the continuous mediator
+Rscript compute_truth.R 4-truth-continuous.R 4-dgp-continuous.R 4-truth-continuous.Rdata 100000
+
+
+
+
+
+
+

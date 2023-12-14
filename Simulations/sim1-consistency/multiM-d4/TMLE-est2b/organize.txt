@@ -1,0 +1,1 @@
+Rscript ../organize_TMLE.R output/ result.Rdata 4 1000 ../../DGPs/1-truth-multi-d4.Rdata

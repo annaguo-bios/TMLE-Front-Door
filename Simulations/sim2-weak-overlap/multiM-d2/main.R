@@ -1,0 +1,122 @@
+args = commandArgs(trailingOnly=T)
+n=as.integer(args[1]) # sample size for the simulation
+seed=as.integer(args[2])  # seeds for replication
+dgp.f.name=args[3] # name for the DGP function
+truth=args[4] # name for the truth.Rdata
+out.path.tmle= args[5] # path for the output folder
+out.path.onestep= args[6] # path for the output folder
+mediator.method=args[7]
+superlearner=as.logical(args[8])
+crossfit=as.logical(args[9])
+K=as.integer(args[10])
+treatment=args[11]
+mediators=args[12]
+outcome=args[13]
+covariates=args[14]
+lib=args[15]
+linkA=args[16]
+np.dnorm=args[17]
+truncate_lower=as.integer(args[18])
+truncate_upper=as.integer(args[19])
+
+if(file.exists(paste0(out.path.tmle,"output_",n,"_",seed,".Rdata")) & file.exists(paste0(out.path.onestep,"output_",n,"_",seed,".Rdata"))){
+  stop("File exists!")
+}
+
+library(ggplot2)
+library(ggpubr)
+library(latex2exp)
+library(reshape2)
+library(stats)
+library(haldensify)
+library(np)
+library(xtable)
+library(SuperLearner)
+library(densratio)
+library(MASS)
+library(mvtnorm)
+library(TmleFrontdoor)
+
+
+set.seed(seed)
+
+#################################################
+# Load truth
+#################################################
+load(truth)
+
+# generate data
+dat_output = generate_data(n)
+data = dat_output$data
+attach(data, warn.conflicts=FALSE)
+
+
+# run TMLE
+tmle_output_Y1 <- TMLE(a=1,data=data,treatment=treatment, mediators=eval(parse(text = mediators)), outcome=outcome, covariates=eval(parse(text = covariates)),
+                   onestep=T, mediator.method=mediator.method, superlearner=superlearner,crossfit=crossfit,K=K,
+                   lib = eval(parse(text = lib)), n.iter=15000, eps=T, cvg.criteria=0.001,
+                   linkA=linkA, np.dnorm = np.dnorm, truncate_lower = truncate_lower, truncate_upper = truncate_upper)
+
+print("Y1 done")
+tmle_output_Y0 <- TMLE(a=0,data=data,treatment=treatment, mediators=eval(parse(text = mediators)), outcome=outcome, covariates=eval(parse(text = covariates)),
+                       onestep=T, mediator.method=mediator.method, superlearner=superlearner,crossfit=crossfit,K=K,
+                       lib = eval(parse(text = lib)), n.iter=15000, eps=T, cvg.criteria=0.001,
+                       linkA=linkA, np.dnorm = np.dnorm, truncate_lower = truncate_lower, truncate_upper = truncate_upper)
+
+
+# estimate E[Y(1)], E[Y(0)], and ATE
+hat_E.Y1 = tmle_output_Y1$TMLE$estimated_psi
+hat_E.Y0 = tmle_output_Y0$TMLE$estimated_psi
+hat_ATE = hat_E.Y1 - hat_E.Y0
+
+# lower CI
+lower.ci_Y1 = tmle_output_Y1$TMLE$lower.ci
+lower.ci_Y0 = tmle_output_Y0$TMLE$lower.ci
+lower.ci_ATE = hat_ATE - 1.96*sqrt(mean((tmle_output_Y1$TMLE$EIF-tmle_output_Y0$TMLE$EIF)^2)/n)
+# lower.ci_Y1 = hat_E.Y1-1.96*sqrt(mean(tmle_output_Y1$EIF^2-tmle_output_Y1$EIF)/n)
+# lower.ci_Y0 = hat_E.Y0-1.96*sqrt(mean(tmle_output_Y0$EIF^2-tmle_output_Y0$EIF)/n)
+# lower.ci_ATE = hat_ATE - 1.96*sqrt(mean((tmle_output_Y1$EIF-tmle_output_Y0$EIF)^2-(tmle_output_Y1$EIF-tmle_output_Y0$EIF))/n)
+
+# upper CI
+upper.ci_Y1 = tmle_output_Y1$TMLE$upper.ci
+upper.ci_Y0 = tmle_output_Y0$TMLE$upper.ci
+upper.ci_ATE = hat_ATE + 1.96*sqrt(mean((tmle_output_Y1$TMLE$EIF-tmle_output_Y0$TMLE$EIF)^2)/n)
+# lower.ci_Y1 = hat_E.Y1+1.96*sqrt(mean(tmle_output_Y1$EIF^2-tmle_output_Y1$EIF)/n)
+# lower.ci_Y0 = hat_E.Y0+1.96*sqrt(mean(tmle_output_Y0$EIF^2-tmle_output_Y0$EIF)/n)
+# upper.ci_ATE = hat_ATE + 1.96*sqrt(mean((tmle_output_Y1$EIF-tmle_output_Y0$EIF)^2-(tmle_output_Y1$EIF-tmle_output_Y0$EIF))/n)
+
+# compute bias
+bias_Y1 = hat_E.Y1 - E.Y1
+bias_Y0 = hat_E.Y0 - E.Y0
+bias_ATE = hat_ATE - ATE
+
+save(list = c("tmle_output_Y1","tmle_output_Y0","bias_Y1","bias_Y0","bias_ATE","hat_E.Y1","hat_E.Y0","hat_ATE","lower.ci_Y1","lower.ci_Y0","lower.ci_ATE","upper.ci_Y1","upper.ci_Y0","upper.ci_ATE"),file = paste0(out.path.tmle,"output_",n,"_",seed,".Rdata"))
+
+
+# estimate E[Y(1)], E[Y(0)], and ATE
+hat_E.Y1 = tmle_output_Y1$Onestep$estimated_psi
+hat_E.Y0 = tmle_output_Y0$Onestep$estimated_psi
+hat_ATE = hat_E.Y1 - hat_E.Y0
+
+# lower CI
+lower.ci_Y1 = tmle_output_Y1$Onestep$lower.ci
+lower.ci_Y0 = tmle_output_Y0$Onestep$lower.ci
+lower.ci_ATE = hat_ATE - 1.96*sqrt(mean((tmle_output_Y1$Onestep$EIF-tmle_output_Y0$Onestep$EIF)^2)/n)
+# lower.ci_Y1 = hat_E.Y1-1.96*sqrt(mean(tmle_output_Y1$EIF^2-tmle_output_Y1$EIF)/n)
+# lower.ci_Y0 = hat_E.Y0-1.96*sqrt(mean(tmle_output_Y0$EIF^2-tmle_output_Y0$EIF)/n)
+# lower.ci_ATE = hat_ATE - 1.96*sqrt(mean((tmle_output_Y1$EIF-tmle_output_Y0$EIF)^2-(tmle_output_Y1$EIF-tmle_output_Y0$EIF))/n)
+
+# upper CI
+upper.ci_Y1 = tmle_output_Y1$Onestep$upper.ci
+upper.ci_Y0 = tmle_output_Y0$Onestep$upper.ci
+upper.ci_ATE = hat_ATE + 1.96*sqrt(mean((tmle_output_Y1$Onestep$EIF-tmle_output_Y0$Onestep$EIF)^2)/n)
+# lower.ci_Y1 = hat_E.Y1+1.96*sqrt(mean(tmle_output_Y1$EIF^2-tmle_output_Y1$EIF)/n)
+# lower.ci_Y0 = hat_E.Y0+1.96*sqrt(mean(tmle_output_Y0$EIF^2-tmle_output_Y0$EIF)/n)
+# upper.ci_ATE = hat_ATE + 1.96*sqrt(mean((tmle_output_Y1$EIF-tmle_output_Y0$EIF)^2-(tmle_output_Y1$EIF-tmle_output_Y0$EIF))/n)
+
+# compute bias
+bias_Y1 = hat_E.Y1 - E.Y1
+bias_Y0 = hat_E.Y0 - E.Y0
+bias_ATE = hat_ATE - ATE
+
+save(list = c("tmle_output_Y1","tmle_output_Y0","bias_Y1","bias_Y0","bias_ATE","hat_E.Y1","hat_E.Y0","hat_ATE","lower.ci_Y1","lower.ci_Y0","lower.ci_ATE","upper.ci_Y1","upper.ci_Y0","upper.ci_ATE"),file = paste0(out.path.onestep,"output_",n,"_",seed,".Rdata"))

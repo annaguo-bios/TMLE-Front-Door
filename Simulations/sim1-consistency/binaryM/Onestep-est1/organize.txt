@@ -1,0 +1,1 @@
+Rscript ../organize_onestep.R output/ result.Rdata 4 1000 ../../DGPs/1-truth-binary.Rdata

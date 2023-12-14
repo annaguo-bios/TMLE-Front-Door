@@ -1,0 +1,1 @@
+Rscript ../organize_TMLE.R output/ result.Rdata 3 1000 ../../../DGPs/3-truth-binary.Rdata
