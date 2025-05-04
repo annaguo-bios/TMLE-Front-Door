@@ -66,11 +66,11 @@ generate_data <- function(n,parA = c(0.48, 0.07, 1.00, -1.00, -0.34, -0.12, 0.30
 
   A <- rbinom(n, 1, plogis(parA[1] + rowSums(sweep(X, 2, parA[2:11], "*")) +  rowSums(sweep(X^2,2,parA[12:21],"*")) )) # p(A|X)
   
-  U <- parU[1] + parU[2]*A + rowSums(sweep(X, 2, parU[3:12], "*")) + rowSums(diag(A)%*%sweep(X[,1:5],2,parU[13:17],"*")) + rnorm(n,0,sd.U) # p(U|A,X)
+  U <- parU[1] + parU[2]*A + rowSums(sweep(X, 2, parU[3:12], "*")) + rowSums(A*sweep(X[,1:5],2,parU[13:17],"*")) + rnorm(n,0,sd.U) # p(U|A,X)
 
-  M <- parM[1] + parM[2]*A + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(diag(A)%*%sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*"))  + rnorm(n,0,sd.M) # p(M|A,X)
+  M <- parM[1] + parM[2]*A + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(A*sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*"))  + rnorm(n,0,sd.M) # p(M|A,X)
 
-  Y <- parY[1]*U + parY[2]*M + rowSums(sweep(X, 2, parY[3:12], "*")) + rowSums(diag(M)%*%sweep(X[,1:5],2,parY[13:17],"*")) + parY[18]*M^2 + rowSums(sweep(X[,6:10]^2,2,parY[19:23],"*")) + rnorm(n, 0, sd.Y) # p(Y|U,M,X)
+  Y <- parY[1]*U + parY[2]*M + rowSums(sweep(X, 2, parY[3:12], "*")) + rowSums(M*sweep(X[,1:5],2,parY[13:17],"*")) + parY[18]*M^2 + rowSums(sweep(X[,6:10]^2,2,parY[19:23],"*")) + rnorm(n, 0, sd.Y) # p(Y|U,M,X)
   
   data <- data.frame(X=X, U=U, A=A, M=M, Y=Y)
 
@@ -78,10 +78,10 @@ generate_data <- function(n,parA = c(0.48, 0.07, 1.00, -1.00, -0.34, -0.12, 0.30
   ps <- A*plogis(parA[1] + rowSums(sweep(X, 2, parA[2:11], "*")) +  rowSums(sweep(X^2,2,parA[12:21],"*")) )+(1-A)*(1-plogis(parA[1] + rowSums(sweep(X, 2, parA[2:11], "*")) +  rowSums(sweep(X^2,2,parA[12:21],"*")) ))
 
   # mediator density ratio: p(M|a,X)/p(M|A,X)
-  m.ratio.a1 <- dnorm(M,parM[1] + parM[2]*1 + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(diag(rep(1,n))%*%sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)/
-    dnorm(M,parM[1] + parM[2]*A + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(diag(A)%*%sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)
-  m.ratio.a0 <- dnorm(M,parM[1] + parM[2]*0 + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(diag(rep(0,n))%*%sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)/
-    dnorm(M,parM[1] + parM[2]*A + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(diag(A)%*%sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)
+  m.ratio.a1 <- dnorm(M,parM[1] + parM[2]*1 + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(1*sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)/
+    dnorm(M,parM[1] + parM[2]*A + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(A*sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)
+  m.ratio.a0 <- dnorm(M,parM[1] + parM[2]*0 + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(0*sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)/
+    dnorm(M,parM[1] + parM[2]*A + rowSums(sweep(X, 2, parM[3:12], "*")) + rowSums(A*sweep(X[,1:5],2,parM[13:17],"*")) + rowSums(sweep(X[,6:10]^2,2,parM[18:22],"*")) ,sd.M)
 
   return(list(data = data,
               X=X,

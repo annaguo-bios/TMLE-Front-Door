@@ -16,9 +16,20 @@ covariates=args[14]
 lib=args[15]
 
 
-if(file.exists(paste0(out.path.tmle,"output_",n,"_",seed,".Rdata")) & file.exists(paste0(out.path.onestep,"output_",n,"_",seed,".Rdata"))){
+# Set optional argument with default value
+ATT.arg = ifelse(length(args) >= 16, as.logical(args[16]), FALSE)
+
+# Example: Print values
+cat("ATT Argument (default FALSE):", ATT.arg, "\n")
+
+# prefix depending on ATT
+if (ATT.arg){prefix = "ATT_"} else {prefix = ""}
+
+
+if(file.exists(paste0(out.path.tmle,prefix,"output_",n,"_",seed,".Rdata")) & file.exists(paste0(out.path.onestep,prefix,"output_",n,"_",seed,".Rdata"))){
   stop("File exists!")
 }
+
 
 library(ggplot2)
 library(ggpubr)
@@ -32,7 +43,7 @@ library(SuperLearner)
 library(densratio)
 library(MASS)
 library(mvtnorm)
-library(TmleFrontdoor)
+library(fdtmle)
 
 
 set.seed(seed)
@@ -57,15 +68,37 @@ dat_output = generate_data(n)
 data = dat_output$data
 attach(data, warn.conflicts=FALSE)
 
-# run TMLE
-tmle_output_Y1 <- TMLE(a=1,data=data,treatment=treatment, mediators=eval(parse(text = mediators)), outcome=outcome, covariates=eval(parse(text = covariates)),
-                   onestep=T, mediator.method=mediator.method, superlearner=superlearner,crossfit=crossfit,K=K,
-                   lib = eval(parse(text = lib)), n.iter=15000, eps=T, cvg.criteria=0.001)
+
+
+if (ATT.arg){
+  
+  Y <- data[[outcome]]
+  A <- data[[treatment]]
+  estimated_psi <- mean(Y[A==1])
+  EIF <- (A==1)/mean(A==1)*(Y- estimated_psi)
+  
+  lower.ci <- estimated_psi - 1.96*sqrt(mean(EIF^2)/n)
+  upper.ci <- estimated_psi + 1.96*sqrt(mean(EIF^2)/n)
+  
+  Onestep <- list(estimated_psi=estimated_psi, EIF=EIF, lower.ci=lower.ci, upper.ci=upper.ci)
+  TMLE <- list(estimated_psi=estimated_psi, EIF=EIF, lower.ci=lower.ci, upper.ci=upper.ci)
+  
+  tmle_output_Y1 <- list(TMLE=TMLE, Onestep=Onestep)
+  
+}else{
+  
+  # run TMLE
+  tmle_output_Y1 <- TMLE(a=1,data=data,treatment=treatment, mediators=eval(parse(text = mediators)), outcome=outcome, covariates=eval(parse(text = covariates)),
+                         onestep=T, mediator.method=mediator.method, superlearner=superlearner,crossfit=crossfit,K=K,
+                         lib = eval(parse(text = lib)), n.iter=15000, eps=T, cvg.criteria=0.001)
+}
+
 
 print("Y1 done")
 tmle_output_Y0 <- TMLE(a=0,data=data,treatment=treatment, mediators=eval(parse(text = mediators)), outcome=outcome, covariates=eval(parse(text = covariates)),
                        onestep=T, mediator.method=mediator.method, superlearner=superlearner,crossfit=crossfit,K=K,
-                       lib = eval(parse(text = lib)), n.iter=15000, eps=T, cvg.criteria=0.001)
+                       lib = eval(parse(text = lib)), n.iter=15000, eps=T, cvg.criteria=0.001,ATT.arg)
+
 
 # estimate E[Y(1)], E[Y(0)], and ATE
 hat_E.Y1 = tmle_output_Y1$TMLE$estimated_psi
@@ -93,7 +126,7 @@ bias_Y1 = hat_E.Y1 - E.Y1
 bias_Y0 = hat_E.Y0 - E.Y0
 bias_ATE = hat_ATE - ATE
 
-save(list = c("tmle_output_Y1","tmle_output_Y0","bias_Y1","bias_Y0","bias_ATE","hat_E.Y1","hat_E.Y0","hat_ATE","lower.ci_Y1","lower.ci_Y0","lower.ci_ATE","upper.ci_Y1","upper.ci_Y0","upper.ci_ATE"),file = paste0(out.path.tmle,"output_",n,"_",seed,".Rdata"))
+save(list = c("tmle_output_Y1","tmle_output_Y0","bias_Y1","bias_Y0","bias_ATE","hat_E.Y1","hat_E.Y0","hat_ATE","lower.ci_Y1","lower.ci_Y0","lower.ci_ATE","upper.ci_Y1","upper.ci_Y0","upper.ci_ATE"),file = paste0(out.path.tmle,prefix,"output_",n,"_",seed,".Rdata"))
 
 
 # estimate E[Y(1)], E[Y(0)], and ATE
@@ -122,4 +155,4 @@ bias_Y1 = hat_E.Y1 - E.Y1
 bias_Y0 = hat_E.Y0 - E.Y0
 bias_ATE = hat_ATE - ATE
 
-save(list = c("tmle_output_Y1","tmle_output_Y0","bias_Y1","bias_Y0","bias_ATE","hat_E.Y1","hat_E.Y0","hat_ATE","lower.ci_Y1","lower.ci_Y0","lower.ci_ATE","upper.ci_Y1","upper.ci_Y0","upper.ci_ATE"),file = paste0(out.path.onestep,"output_",n,"_",seed,".Rdata"))
+save(list = c("tmle_output_Y1","tmle_output_Y0","bias_Y1","bias_Y0","bias_ATE","hat_E.Y1","hat_E.Y0","hat_ATE","lower.ci_Y1","lower.ci_Y0","lower.ci_ATE","upper.ci_Y1","upper.ci_Y0","upper.ci_ATE"),file = paste0(out.path.onestep,prefix,"output_",n,"_",seed,".Rdata"))

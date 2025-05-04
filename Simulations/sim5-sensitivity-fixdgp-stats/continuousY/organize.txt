@@ -1,0 +1,16 @@
+Rscript organize.R fd_admg1 AIPW 200
+Rscript organize.R fd_admg2 AIPW 200
+Rscript organize.R nonfd_admg1 AIPW 200
+Rscript organize.R nonfd_admg2 AIPW 200
+Rscript organize.R fd_admg1 IPW 200
+Rscript organize.R fd_admg2 IPW 200
+Rscript organize.R nonfd_admg1 IPW 200
+Rscript organize.R nonfd_admg2 IPW 200
+Rscript organize.R fd_admg1 Gcomp 200
+Rscript organize.R fd_admg2 Gcomp 200
+Rscript organize.R nonfd_admg1 Gcomp 200
+Rscript organize.R nonfd_admg2 Gcomp 200
+Rscript organize.R fd_admg1 verma 200
+Rscript organize.R fd_admg2 verma 200
+Rscript organize.R nonfd_admg1 verma 200
+Rscript organize.R nonfd_admg2 verma 200

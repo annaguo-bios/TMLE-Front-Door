@@ -1,5 +1,8 @@
+library(here)
 library(outliers) #containing function outlier
 library(dplyr)
+
+setwd(here('./sim2-weak-overlap'))
 
 # sample size
 n= c(500,1000,2000)

@@ -1,3 +1,9 @@
+library(here)
+library(outliers) #containing function outlier
+library(dplyr)
+
+setwd(here('./sim3-misspecification'))
+
 # sample size
 n= c(500,1000,2000)
 n.vec <- c(500,1000,2000)

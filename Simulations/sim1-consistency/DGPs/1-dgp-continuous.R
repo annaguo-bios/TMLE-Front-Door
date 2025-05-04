@@ -1,4 +1,3 @@
-
 generate_data <- function(n,parA = c(0.3,0.2), parU=c(1,1,1,0), parM = c(1,1,1,0), parY = c(1, 1, 1, 0), sd.M=1, sd.U=1, sd.Y=1){
   
   X <- runif(n, 0, 1) # p(X)

@@ -1,3 +1,6 @@
+library(here)
+setwd(here('./sim1-consistency/binaryM'))
+
 # packages
 library(ggplot2)
 library(ggpubr)
@@ -38,3 +41,27 @@ p.binary <- plot_grid(
 
 
 ggsave("plot.pdf", plot = p.binary, width = 16, height = 8, units = "in")
+
+
+### binary case ====
+# the truth
+load("../DGPs/1-truth-binary-ATT.Rdata")
+
+## binary-est1====
+load("TMLE-est1/ATT_result.Rdata")
+p.binary.est1 <- plot.tmle(r'($\psi_1(\hat{Q}^*)$)')
+
+## binary-onestep====
+load("Onestep-est1/ATT_result.Rdata")
+p.binary.one <- plot.tmle(r'($\psi_1^{+}(\hat{Q})$)')
+
+p.binary <- plot_grid(
+  p.binary.est1
+  ,p.binary.one
+  , align = "h"
+  , ncol = 2
+)
+
+
+ggsave("ATT_plot.pdf", plot = p.binary, width = 16, height = 8, units = "in")
+

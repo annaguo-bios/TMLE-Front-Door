@@ -1,3 +1,6 @@
+library(here)
+setwd(here("./sim1-consistency/multiM-d2/"))
+
 # packages
 library(ggplot2)
 library(ggpubr)
@@ -17,7 +20,8 @@ n.vec <- c(250,500,1000,2000,4000,8000)
 # number of simulation
 nsim <- 1000
 
-### binary case ====
+################################################ ATE ###################################################################
+### multiM-d2 case ====
 # the truth
 load("../DGPs/1-truth-multi-d2.Rdata")
 
@@ -77,4 +81,68 @@ p <- plot_grid(
 
 
 ggsave("plot.pdf", plot = p, width = 16, height = 20, units = "in")
+
+
+
+################################################ ATT ###################################################################
+### multiM-d2 case ====
+# the truth
+load("../DGPs/1-truth-multi-d2-ATT.Rdata")
+
+## 2D est2 ====
+load("TMLE-est2a/ATT_result.Rdata")
+p.2D.est2 <- plot.tmle(r'($\psi_{2a}(\hat{Q}^*)$)')
+
+## 2D est2-dnorm ====
+load("TMLE-est2-dnorm/ATT_result.Rdata")
+p.2D.est2.dnorm <- plot.tmle(r'($\psi_2(\hat{Q}^*)$ - dnorm)')
+
+## 2D est3 ====
+load("TMLE-est2b/ATT_result.Rdata")
+p.2D.est3 <- plot.tmle(r'($\psi_{2b}(\hat{Q}^*)$)')
+
+p.2D <- plot_grid(
+  p.2D.est2
+  ,p.2D.est2.dnorm
+  ,p.2D.est3
+  , align = "hv"
+  , ncol = 1
+)
+
+## 2D onestep-densratio ====
+load("Onestep-est2a/ATT_result.Rdata")
+p.2D.1densratio <- plot.tmle(r'($\psi_{2a}^{+}(\hat{Q})$)')
+
+## 2D onestep-dnorm ====
+load("Onestep-est2-dnorm/ATT_result.Rdata")
+p.2D.1dnorm.sr <- plot.tmle(r'($\psi_2^{+}(\hat{Q})$ - dnorm)')
+
+## 2D onestep-bayes ====
+load("Onestep-est2b/ATT_result.Rdata")
+p.2D.1bayes <- plot.tmle(r'($\psi_{2b}^{+}(\hat{Q})$)')
+
+p.con1 <- plot_grid(
+  p.2D.est2
+  ,p.2D.est2.dnorm
+  ,p.2D.est3
+  , align = "hv"
+  , ncol = 1
+)
+
+p.con2 <- plot_grid(
+  p.2D.1densratio
+  ,p.2D.1dnorm.sr
+  ,p.2D.1bayes
+  , align = "hv"
+  , ncol = 1
+)
+
+
+p <- plot_grid(
+  p.con1
+  ,p.con2,
+  align="hv",ncol=2)
+
+
+ggsave("ATT_plot.pdf", plot = p, width = 16, height = 20, units = "in")
 

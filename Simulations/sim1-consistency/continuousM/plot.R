@@ -1,3 +1,6 @@
+library(here)
+setwd(here("./sim1-consistency/continuousM"))
+
 # packages
 library(ggplot2)
 library(ggpubr)
@@ -16,6 +19,8 @@ n.vec <- c(250,500,1000,2000,4000,8000)
 
 # number of simulation
 nsim <- 1000
+
+################################################ ATE ###################################################################
 
 # the truth
 load("../DGPs/1-truth-continuous.Rdata")
@@ -88,3 +93,79 @@ p <- plot_grid(
 
 
 ggsave("plot.pdf", plot = p, width = 16, height = 18, units = "in")
+
+
+################################################ ATT ###################################################################
+
+# the truth
+load("../DGPs/1-truth-continuous-ATT.Rdata")
+
+## continuous-est1 ====
+load("TMLE-est1/ATT_result.Rdata")
+p.con.est1 <- plot.tmle(r'($\psi_1(\hat{Q}^*)$)')
+
+## continuous-est1-dnorm ====
+load("TMLE-est1-dnorm/ATT_result.Rdata")
+p.con.est1.dnorm <- plot.tmle(r'($\psi_1(\hat{Q}^*)$ - dnorm)')
+
+## continuous-est2 ====
+load("TMLE-est2a/ATT_result.Rdata")
+p.con.est2 <- plot.tmle(r'($\psi_{2a}(\hat{Q}^*)$)')
+
+## continuous-est2-dnorm ====
+load("TMLE-est2-dnorm/ATT_result.Rdata")
+p.con.est2.dnorm <- plot.tmle(r'($\psi_{2}(\hat{Q}^*)$ - dnorm)')
+
+## continuous-est3 ====
+load("TMLE-est2b/ATT_result.Rdata")
+p.con.est3 <- plot.tmle(r'($\psi_{2b}(\hat{Q}^*)$)')
+
+## continuous-onestep-np ====
+load("Onestep-est1/ATT_result.Rdata")
+p.con.1np <- plot.tmle(r'($\psi_1^{+}(\hat{Q})$)')
+
+## continuous-onestep-dnorm-sr ====
+load("Onestep-est2-dnorm/ATT_result.Rdata")
+p.con.1dnorm.sr <- plot.tmle(r'($\psi_{2}^{+}(\hat{Q})$ - dnorm)')
+
+## continuous-onestep-dnorm ====
+load("Onestep-est1-dnorm/ATT_result.Rdata")
+p.con.1dnorm <- plot.tmle(r'($\psi_1^{+}(\hat{Q})$ - dnorm)')
+
+## continuous-onestep-densratio ====
+load("Onestep-est2a/ATT_result.Rdata")
+p.con.1densratio <- plot.tmle(r'($\psi_{2a}^{+}(\hat{Q})$)')
+
+## continuous-onestep-bayes ====
+load("Onestep-est2b/result.Rdata")
+p.con.1bayes <- plot.tmle(r'($\psi_{2b}^{+}(\hat{Q})$)')
+
+p.con1 <- plot_grid(
+  p.con.est1
+  ,p.con.est1.dnorm
+  ,p.con.est2
+  ,p.con.est2.dnorm
+  ,p.con.est3
+  , align = "hv"
+  , ncol = 1
+)
+
+p.con2 <- plot_grid(
+  p.con.1np
+  ,p.con.1dnorm
+  ,p.con.1densratio
+  ,p.con.1dnorm.sr
+  ,p.con.1bayes
+  , align = "hv"
+  , ncol = 1
+)
+
+
+p <- plot_grid(
+  p.con1
+  ,p.con2,
+  align="hv",ncol=2)
+
+
+ggsave("ATT_plot.pdf", plot = p, width = 16, height = 18, units = "in")
+

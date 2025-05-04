@@ -1,0 +1,12 @@
+############################# ATE #################################
+## For the binary mediator, binaryZ
+Rscript compute_truth.R 6-truth-binaryM-binaryZ.R 6-dgp-binaryM-binaryZ.R 6-truth-binaryM-binaryZ.Rdata 100000
+Rscript compute_truth.R 6-truth-binaryM-binaryZ.R 6-dgp-binaryM-binaryZ-dgp2.R 6-truth-binaryM-binaryZ-dgp2.Rdata 100000
+
+## For the binary mediator, continuousZ
+Rscript compute_truth_continuousZ.R 6-truth-binaryM-continuousZ.R 6-dgp-binaryM-continuousZ.R 6-truth-binaryM-continuousZ-pz.Rdata 100000 dgp-pz
+Rscript compute_truth_continuousZ.R 6-truth-binaryM-continuousZ.R 6-dgp-binaryM-continuousZ.R 6-truth-binaryM-continuousZ-uniform1-pz.Rdata 100000 uniform1-pz
+Rscript compute_truth_continuousZ.R 6-truth-binaryM-continuousZ.R 6-dgp-binaryM-continuousZ.R 6-truth-binaryM-continuousZ-uniform100-pz.Rdata 100000 uniform100-pz
+Rscript compute_truth_continuousZ.R 6-truth-binaryM-continuousZ.R 6-dgp-binaryM-continuousZ.R 6-truth-binaryM-continuousZ-normal01-pz.Rdata 100000 normal01-pz
+Rscript compute_truth_continuousZ.R 6-truth-binaryM-continuousZ.R 6-dgp-binaryM-continuousZ.R 6-truth-binaryM-continuousZ-normal10.1-pz.Rdata 100000 normal10.1-pz
+Rscript compute_truth_continuousZ.R 6-truth-binaryM-continuousZ.R 6-dgp-binaryM-continuousZ.R 6-truth-binaryM-continuousZ-normal5.1-pz.Rdata 100000 normal5.1-pz

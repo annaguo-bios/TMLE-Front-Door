@@ -1,0 +1,4 @@
+Rscript organize_TMLE.R TMLE-est1/output/ TMLE-est1/result.Rdata 4 1000 ../DGPs/1-truth-binary.Rdata
+Rscript organize_onestep.R Onestep-est1/output/ Onestep-est1/result.Rdata 4 1000 ../DGPs/1-truth-binary.Rdata
+Rscript organize_TMLE.R TMLE-est1/output/ TMLE-est1/ATT_result.Rdata 4 1000 ../DGPs/1-truth-binary-ATT.Rdata T
+Rscript organize_onestep.R Onestep-est1/output/ Onestep-est1/ATT_result.Rdata 4 1000 ../DGPs/1-truth-binary-ATT.Rdata T

@@ -17,7 +17,7 @@ mediators="'c(\"M\")'"
 outcome="Y"
 covariates="'c(\"X.1\",\"X.2\",\"X.3\",\"X.4\",\"X.5\",\"X.6\",\"X.7\",\"X.8\",\"X.9\",\"X.10\")'"
 lib="\"c('SL.ranger')\""
-
+ATT.arg = 'T'
 for (i in seq_along(n.vec)){
   joblist <- c()
   for (t in 1:nsim){
@@ -26,4 +26,17 @@ for (i in seq_along(n.vec)){
     joblist <- c(joblist,job)
   }
   write.table(joblist, file = paste0("joblist_n",i,".txt"),quote = F, col.names = F, row.names = F)
+}
+
+
+truth= "../../../DGPs/4-truth-binary-ATT.Rdata" # path+name for the truth.Rdata
+
+for (i in seq_along(n.vec)){
+  joblist <- c()
+  for (t in 1:nsim){
+    job <- paste0("Rscript main.R ",n.vec[i]," ",t," ", dgp.f.name," ",truth," ",out.path.tmle," ", out.path.onestep," ",mediator.method," ",superlearner," ",crossfit," ",K," ",treatment," ",mediators," ",
+                  outcome," ",covariates," ",lib,' ',ATT.arg)
+    joblist <- c(joblist,job)
+  }
+  write.table(joblist, file = paste0("ATT-joblist_n",i,".txt"),quote = F, col.names = F, row.names = F)
 }

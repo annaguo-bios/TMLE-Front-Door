@@ -23,6 +23,7 @@ linkA="identity"
 np.dnorm="F"
 truncate_lower="0.001"
 truncate_upper="0.999"
+ATT.arg="T"
 
 for (i in seq_along(n.vec)){
   joblist <- c()
@@ -34,6 +35,17 @@ for (i in seq_along(n.vec)){
   write.table(joblist, file = paste0("est2a-joblist_n",i,".txt"),quote = F, col.names = F, row.names = F)
 }
 
+truth= "../DGPs/2-truth-multi-ATT.Rdata" # path+name for the truth.Rdata
+
+for (i in seq_along(n.vec)){
+  joblist <- c()
+  for (t in 1:nsim){
+    job <- paste0("Rscript main.R ",n.vec[i]," ",t," ", dgp.f.name," ",truth," ",out.path.tmle," ", out.path.onestep," ",mediator.method," ",superlearner," ",crossfit," ",K," ",treatment," ",mediators," ",
+                  outcome," ",covariates," ",lib," ",linkA," ",np.dnorm, " ", truncate_lower, " ", truncate_upper," ",ATT.arg)
+    joblist <- c(joblist,job)
+  }
+  write.table(joblist, file = paste0("ATT-est2a-joblist_n",i,".txt"),quote = F, col.names = F, row.names = F)
+}
 
 ## EST2b ====
 dgp.f.name="../DGPs/2-dgp-multi.R" # name for the DGP function
@@ -62,4 +74,16 @@ for (i in seq_along(n.vec)){
     joblist <- c(joblist,job)
   }
   write.table(joblist, file = paste0("est2b-joblist_n",i,".txt"),quote = F, col.names = F, row.names = F)
+}
+
+truth= "../DGPs/2-truth-multi-ATT.Rdata" # path+name for the truth.Rdata
+
+for (i in seq_along(n.vec)){
+  joblist <- c()
+  for (t in 1:nsim){
+    job <- paste0("Rscript main.R ",n.vec[i]," ",t," ", dgp.f.name," ",truth," ",out.path.tmle," ", out.path.onestep," ",mediator.method," ",superlearner," ",crossfit," ",K," ",treatment," ",mediators," ",
+                  outcome," ",covariates," ",lib," ",linkA," ",np.dnorm," ", truncate_lower," ", truncate_upper," ",ATT.arg)
+    joblist <- c(joblist,job)
+  }
+  write.table(joblist, file = paste0("ATT-est2b-joblist_n",i,".txt"),quote = F, col.names = F, row.names = F)
 }

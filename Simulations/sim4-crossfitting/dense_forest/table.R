@@ -1,3 +1,9 @@
+library(here)
+library(outliers) #containing function outlier
+library(dplyr)
+
+setwd(here('./sim4-crossfitting/dense_forest'))
+
 # sample size
 n= c(500,1000,2000)
 n.vec <- c(500,1000,2000)

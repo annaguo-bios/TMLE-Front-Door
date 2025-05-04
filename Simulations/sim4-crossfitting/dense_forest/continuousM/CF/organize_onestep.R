@@ -5,6 +5,16 @@ n.vec.ind=args[3] # sample size indicator, 1: the long sample size vector, 0: th
 nsim=as.integer(args[4]) # require specifying number of simulations, e.g. nsim <- 1000
 truth=args[5] # path+name for the truth.Rdata
 
+
+# Set optional argument with default value
+ATT.arg = ifelse(length(args) >= 6, as.logical(args[6]), FALSE)
+
+# Example: Print values
+cat("ATT Argument (default FALSE):", ATT.arg, "\n")
+
+# prefix depending on ATT
+if (ATT.arg){prefix = "ATT_"} else {prefix = ""}
+
 library(ggplot2)
 library(ggpubr)
 library(latex2exp)
@@ -138,12 +148,12 @@ for (i in seq_along(n.vec)){
 
   for (t in 1:nsim){
 
-    load(paste0(out.path,"output_",n,"_",t,".Rdata"))
-
+    load(paste0(out.path,prefix,"output_",n,"_",t,".Rdata"))
+    
     # record bias
-    bias_matrix_Y1[t,i] <- bias_Y1
-    bias_matrix_Y0[t,i] <- bias_Y0
-    bias_matrix_ate[t,i] <- bias_ATE
+    bias_matrix_Y1[t,i] <- hat_E.Y1 - E.Y1
+    bias_matrix_Y0[t,i] <- hat_E.Y0 - E.Y0
+    bias_matrix_ate[t,i] <- hat_ATE - ATE
 
     # record point estimate
     est_matrix_Y1[t,i] <- hat_E.Y1
