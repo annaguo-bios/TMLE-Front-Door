@@ -1,48 +1,56 @@
-# Implementation of experiments
+# Experiments & Real Data Applications
 
 
 
 ## Simulations
 
-This folder contains code for implementing the simulation studies discussed in the paper. The four folders, namely sim1-consistency, sim2-weak-overlap, sim3-misspecification, and sim4-crossfitting, correspond to the four subsections on simulation in the paper. 
+This folder contains code for implementing the simulation studies discussed in the paper. The correspondence between folders and figures/tables is summarized as follows:
+
+```text
+├── sim1-consistency
+│   ├── DGPs
+│   ├── binaryM		← Figure 3, 7
+│   ├── continuousM	← Figure 4, 8
+│   ├── multiM-d2	← Figure 5, 9
+│   └── multiM-d4	← Figure 6, 10
+├── sim2-weak-overlap	← Table 1, 8
+│   ├── DGPs
+│   ├── binaryM
+│   ├── continuousM
+│   └── multiM-d2
+├── sim3-misspecification	← Table 2, 9
+│   ├── DGPs
+│   ├── binaryM
+│   └── continuousM
+├── sim4-crossfitting
+│   ├── DGPs
+│   ├── dense_forest	← Table 3, 10
+│   └── sparse_forest	← Table 11, 12
+├── sim5-sensitivity
+│   ├── binaryY-saturated		|
+│   ├── continuousY-binaryX		|	← Table 13
+│   ├── continuousY-continuousX		|
+│   ├── continuousY-continuousXM	← Table 4
+│   ├── continuousY-continuousX_complex		← Table 14
+│   
+├── sim6-verma-efficiency
+│   ├── DGPs
+│   ├── R
+│   ├── binaryM-binaryZ		← Figure 12
+│   ├── binaryM-continuousZ		|
+│   ├── binaryM-continuousZ-nomal01	| 	← Figure 13
+│   ├── binaryM-continuousZ-nomal10	|
+│   └── trash
+├── sim7-nonlinearTMLE	← Table 6, 7
+│   ├── DGPs
+│   ├── binaryM		
+│   ├── continuousM
+│   └── multiM-d2
+```
 
 
-**FOLDERS**
 
-- binaryM is the univariate binary mediator folder.
-
-- continuousM is the univariate continuous mediator folder.
-
-- multiM-d2 is the bivariate mediator folder.
-
-- multiM-d4 is the four-dimensional mediators folder.
-
-- DGPs folders contain the data generating code and code for empirically computing the true ACE and its variance. Execute lines in the compute_truth.txt for computing the truth.
-
-- CF is the Cross Fitting folder.
-
-- Linear is the estimation with linear regressions folder.
-
-- SL is the Super Learner folder.
-
-- RF is the Random Forest folder.
-
-- Onestep-est1 is the estimation using estimator \psi_1^+ folder.
-
-- TMLE-est1 is the estimation using estimator \psi_1 folder.
-
-- Onestep-est2a is the estimation using estimator \psi_{2a}^+ folder.
-
-- TMLE-est2a is the estimation using estimator \psi_{2a} folder.
-
-- Onestep-est2b is the estimation using estimator \psi_{2b}^+ folder.
-
-- TMLE-est2b is the estimation using estimator \psi_{2b} folder.
-
-- output is the folder that contains estimation results.
-
-
-**FILES**
+A summary of the functionality of commonly used files is provided below.
 
 - joblist*.txt: This is the job file for simulation. Each line corresponding to one simulation. It is recommended to execute the job lists using parallel computing.
 
@@ -66,13 +74,15 @@ This folder contains code for implementing the simulation studies discussed in t
 
 ## Real data application
 
-Utilizing our front-door estimation framework, we investigated how early academic achievements influence
-future annual income. The data for this analysis was sourced from the [Life Course Study](https://services.fsd.tuni.fi/catalogue/FSD2076?tab=variables&lang=en&study_language=en. ).
+Utilizing our front-door estimation framework, we analyzed the impact of Mobile Stroke Unit (MSU) dispatch on patients’ functional outcomes using data from the Berlin prehospital stroke care trial (B_PROUD).
 
 
 
-Due to data sharing constraints, we are unable to provide direct access to the raw data used for the real data analysis presented in this study. 
-However, the dataset is available for application through the [Finnish Social Science Data Archive](https://services.fsd.tuni.fi/catalogue/FSD2076?tab=variables&lang=en&study_language=en.)
+We also investigated how early academic achievement influences future annual income, using data from the [Life Course Study](https://services.fsd.tuni.fi/catalogue/FSD2076?tab=variables&lang=en&study_language=en).
+
+
+
+Due to data sharing restrictions, we cannot provide direct access to the raw datasets used in this study. However, the dataset for the first application may be requested from the authors of the [original publication](https://journals.lww.com/epidem/abstract/2023/09000/the_effect_of_mobile_stroke_unit_care_on.14.aspx). The dataset for the second application is available through the [Finnish Social Science Data Archive](https://services.fsd.tuni.fi/catalogue/FSD2076?tab=variables&lang=en&study_language=en).
 
 
 
