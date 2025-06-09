@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage[normalem]{ulem}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{calc}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+% These are LaTeX packages. You can install them using your LaTex management software,
+% or by running `huxtable::install_latex_dependencies()` from within R.
+% Other packages may be required if you use non-standard tabulars (e.g. tabulary).
+\pagenumbering{gobble}
+
+\begin{document}
+
+
+  \providecommand{\huxb}[2]{\arrayrulecolor[RGB]{#1}\global\arrayrulewidth=#2pt}
+  \providecommand{\huxvb}[2]{\color[RGB]{#1}\vrule width #2pt}
+  \providecommand{\huxtpad}[1]{\rule{0pt}{#1}}
+  \providecommand{\huxbpad}[1]{\rule[-#1]{0pt}{#1}}
+
+\begin{table}[ht]
+\begin{centerbox}
+\begin{threeparttable}
+\captionsetup{justification=centering,singlelinecheck=off}
+\caption{One-step and TMLE estimates of the average causal effect of additional mobile stroke unit (MSU) care on modified Rankin scale (mRS)}
+ \setlength{\tabcolsep}{0pt}
+\begin{tabularx}{1\textwidth}{p{0.15\textwidth} p{0.1\textwidth} p{0.1\textwidth} p{0.325\textwidth} p{0.325\textwidth}}
+
+
+\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[b]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright \textbf{{\fontsize{6pt}{7.2pt}\selectfont $M$ and $Y$ type}}\huxbpad{1pt}}} &
+\multicolumn{1}{p{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[b]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright \textbf{{\fontsize{6pt}{7.2pt}\selectfont $M$ cutoff}}\huxbpad{1pt}}} &
+\multicolumn{1}{p{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[b]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright \textbf{{\fontsize{6pt}{7.2pt}\selectfont $Y$ cutoff}}\huxbpad{1pt}}} &
+\multicolumn{1}{p{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[b]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering \textbf{{\fontsize{6pt}{7.2pt}\selectfont One-step estimator}}\huxbpad{1pt}}} &
+\multicolumn{1}{p{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[b]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering \textbf{{\fontsize{6pt}{7.2pt}\selectfont TMLE}}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}m{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont Continuous}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont -}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont -}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.204, 95\%CI (-0.351, -0.058)}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.199, 95\%CI (-0.35, -0.048)}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}m{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont Binary}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 48 mins}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 2}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.046, 95\%CI (-0.084, -0.009)}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.05, 95\%CI (-0.088, -0.012)}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}m{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont Binary}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 48 mins}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 3}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.024, 95\%CI (-0.062, 0.013)}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.013, 95\%CI (-0.051, 0.025)}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}m{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont Binary}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 48 mins}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 4}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont 0.001, 95\%CI (-0.035, 0.036)}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont 0, 95\%CI (-0.035, 0.035)}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}m{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont Binary}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 75 mins}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 2}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.03, 95\%CI (-0.054, -0.006)}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.031, 95\%CI (-0.054, -0.007)}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}m{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont Binary}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 75 mins}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 3}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.03, 95\%CI (-0.055, -0.005)}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.016, 95\%CI (-0.04, 0.007)}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}m{0.15\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.15\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont Binary}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 75 mins}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.1\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.1\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont 4}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.014, 95\%CI (-0.036, 0.009)}\huxbpad{1pt}}} &
+\multicolumn{1}{m{0.325\textwidth}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{0.325\textwidth-1pt-1pt}{\huxtpad{1pt + 1em}\centering {\fontsize{6pt}{7.2pt}\selectfont -0.003, 95\%CI (-0.023, 0.017)}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{5}{!{\huxvb{0, 0, 0}{0}}m{1\textwidth+8\tabcolsep}!{\huxvb{0, 0, 0}{0}}}{\hspace{1pt}\parbox[c]{1\textwidth+8\tabcolsep-1pt-1pt}{\huxtpad{1pt + 1em}\raggedright {\fontsize{6pt}{7.2pt}\selectfont * Adopt one-step estimator $\psi_1(\hat{Q})$ and TMLE $\psi_1(\hat{Q}^\star)$ under binary $M$, and adopt one-step estimator $\psi_{2b}(\hat{Q})$ and TMLE $\psi_{2b}(\hat{Q}^\star)$ under continuous $M$.}\huxbpad{1pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{}
+\arrayrulecolor{black}
+\end{tabularx}
+\end{threeparttable}\par\end{centerbox}
+
+\end{table}
+
+
+
+\end{document}
