@@ -278,31 +278,38 @@ table1 <- as_hux(dat) %>%
   merge_cells(3, 10:12) %>%
   merge_cells(3, 13:15) %>%
   merge_cells(3, 16:18) %>%
-  insert_row("","","","","","","","","","","","","","","","","","", after = 4) %>% 
-  insert_row("","","","","","","","","","","","","","","","","","", after = 10) %>% 
-  insert_row("","","","","","","","","","","","","","","","","","", after = 16) %>% 
-  insert_column(c("","","","","n=500","Bias","SD","MSE","CI coverage","CI width","n=1000","Bias","SD","MSE","CI coverage","CI width","n=2000","Bias","SD","MSE","CI coverage","CI width"), after = 0) %>%
+  # insert_row("","","","","","","","","","","","","","","","","","", after = 4) %>% 
+  # insert_row("","","","","","","","","","","","","","","","","","", after = 10) %>% 
+  # insert_row("","","","","","","","","","","","","","","","","","", after = 16) %>% 
+  insert_column(c("","","","","Bias","SD","MSE","Coverage","CI width","Bias","SD","MSE","Coverage","CI width","Bias","SD","MSE","Coverage","CI width"), after = 0) %>%
+  insert_column(c("","","","","n=500","","","","","n=1000","","","","","n=2000","","","",""), after = 0) %>%
+  merge_cells(5:9, 1) %>% 
+  merge_cells(10:14, 1) %>% 
+  merge_cells(15:19, 1) %>%
+  set_valign(c(5,10,15), col=1,"middle") %>% 
+  set_rotation(c(5,10,15), 1, 90) %>% 
   set_escape_contents(3, 1:ncol(.), FALSE) %>%
   set_align(col=1, everywhere, "left") %>%
+  set_number_format(everywhere,everywhere, "%s") %>% 
   set_align(col=2:ncol(.),everywhere,"center") %>%
   set_all_padding(-1)  %>% 
+  set_bold(everywhere, 1) %>%
   set_bold(1, everywhere) %>%
-  set_bold(c(5,11,17), everywhere) %>%
   set_italic(2,everywhere) %>%
-  set_bottom_border(row = 1, col =2:ncol(.)) %>% 
-  set_bottom_border(row = 4, col =2:ncol(.)) %>% 
-  set_bottom_border(row = 2, col =2:ncol(.)) %>% 
-  set_right_border(5:nrow(.), 4, brdr(0.4,"double")) %>%
-  set_right_border(5:nrow(.), 7, brdr(0.4,"solid")) %>%
-  set_right_border(5:nrow(.), 10, brdr(0.4,"double")) %>%
-  set_right_border(5:nrow(.), 13, brdr(0.4,"double")) %>%
-  set_right_border(5:nrow(.), 16, brdr(0.4,"solid")) %>%
+  set_bottom_border(row = 1, col =3:ncol(.)) %>% 
+  set_bottom_border(row = 4, col =3:ncol(.)) %>% 
+  set_bottom_border(row = 2, col =3:ncol(.)) %>% 
+  set_right_border(5:nrow(.), 5, brdr(0.4,"double")) %>%
+  set_right_border(5:nrow(.), 8, brdr(0.4,"solid")) %>%
+  set_right_border(5:nrow(.), 11, brdr(0.4,"double")) %>%
+  set_right_border(5:nrow(.), 14, brdr(0.4,"double")) %>%
+  set_right_border(5:nrow(.), 17, brdr(0.4,"solid")) %>%
   # insert_row(c("Note: Number of simulations=1000. \\(\\psi^{1,2}(\\hat{Q}^\\star)\\) refer to TMLE estimators and \\(\\psi^{1,2}_{+}(\\hat{Q})\\) refer to the corresponding Onestep estimators. Lin. Reg refers to linear regression, SL refers to super learner, and CR denotes super learner with cross fitting using 5 folds.","","","","","","","","","","","","","","","","","",""), after = nrow(.)) %>%
   # merge_cells(nrow(.),1:ncol(.)) %>% 
   # set_row_height(everywhere, rep(0.02/nrow(.),nrow(.))) %>%
   set_top_border(row=1,col=everywhere,brdr(1, "solid")) %>% set_bottom_border(row = nrow(.),col = everywhere,brdr(1, "solid")) %>%
-  set_font_size(7) %>% set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>% set_caption("Comparative analysis of TMLEs and one-step estimators under model misspecifications.") 
+  set_font_size(7) %>% set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>% set_caption("Performance of ATE estimators under model misspecifications across mediator types.") 
 
 table1
-quick_latex(table1)
-y
+quick_latex(table1, file='table.tex')
+

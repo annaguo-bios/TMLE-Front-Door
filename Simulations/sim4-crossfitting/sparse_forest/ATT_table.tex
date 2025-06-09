@@ -30,34 +30,36 @@
 \begin{centerbox}
 \begin{threeparttable}
 \captionsetup{justification=centering,singlelinecheck=off}
-\caption{Comparative analysis for the impact of cross-fitting on TMLEs and one-step estimators in conjunction with the use of random forests.
-RF refers to random forest with 200 trees and a minimum node size of 1, and CF denotes random forest with cross fitting using 5 folds.}
+\caption{Impact of cross-fitting on TMLE and one-step ATE estimators using random forests (RF: 200 trees; min node size = 1; CF: 5-fold cross-fitting).}
  \setlength{\tabcolsep}{0pt}
-\begin{tabular}{l l l l l l l l l l l l l}
+\begin{tabular}{l l l l l l l l l l l l l l}
 
 
-\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
+\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
 \arrayrulecolor{black}
 
 \multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{6}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont TMLEs}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{6}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont One-step estimators}} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textit{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }}} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Binary}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{4}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Continuous}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Binary}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{4}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Continuous}} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont \(\psi_1(\hat{Q}^\star)\)} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont \(\psi_{2a}(\hat{Q}^\star)\)} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont \(\psi_{2b}(\hat{Q}^\star)\)} \hspace{0pt}\huxbpad{0pt}} &
@@ -69,7 +71,8 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont RF} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CF} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont RF} \hspace{0pt}\huxbpad{0pt}} &
@@ -84,28 +87,11 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CF} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=500}} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
-
-
-\hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
-\arrayrulecolor{black}
-
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.406} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.033} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.123} \hspace{0pt}\huxbpad{0pt}} &
@@ -123,13 +109,14 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.590} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.59} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.141} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.217} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.431} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.183} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.310} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.31} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.051} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.135} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.355} \hspace{0pt}\huxbpad{0pt}} &
@@ -141,7 +128,8 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.512} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.021} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.062} \hspace{0pt}\huxbpad{0pt}} &
@@ -153,13 +141,14 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.303} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.256} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.068} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.110} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.11} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI coverage} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Coverage} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 4.7\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 85.7\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 96.6\%} \hspace{0pt}\huxbpad{0pt}} &
@@ -177,10 +166,11 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\multirow[c]{-5}{*}[0ex]{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \rotatebox{90}{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=500}}} \hspace{0pt}\huxbpad{0pt}}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.275} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.424} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 1.010} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 1.01} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 1.073} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.408} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.956} \hspace{0pt}\huxbpad{0pt}} &
@@ -195,29 +185,12 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=1e+03}} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
-
-
-\hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
-\arrayrulecolor{black}
-
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.458} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.030} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.03} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.165} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.160} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.16} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.207} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.019} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.111} \hspace{0pt}\huxbpad{0pt}} &
@@ -231,9 +204,10 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.442} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.100} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.1} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.137} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.237} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.134} \hspace{0pt}\huxbpad{0pt}} &
@@ -249,7 +223,8 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.405} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.011} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.046} \hspace{0pt}\huxbpad{0pt}} &
@@ -258,7 +233,7 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.059} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.014} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.011} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.150} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.15} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.132} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.058} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.065} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
@@ -267,7 +242,8 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI coverage} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Coverage} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 5.6\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 90\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 88.3\%} \hspace{0pt}\huxbpad{0pt}} &
@@ -285,7 +261,8 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\multirow[c]{-5}{*}[0ex]{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \rotatebox{90}{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=1000}}} \hspace{0pt}\huxbpad{0pt}}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.187} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.336} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.661} \hspace{0pt}\huxbpad{0pt}} &
@@ -303,26 +280,9 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=2e+03}} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
-
-
-\hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
-\arrayrulecolor{black}
-
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.490} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.49} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.024} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.146} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.171} \hspace{0pt}\huxbpad{0pt}} &
@@ -339,17 +299,18 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.328} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.076} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.090} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.09} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.164} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.091} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.170} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.17} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.035} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.076} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.143} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.180} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.18} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.074} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.175} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
@@ -357,13 +318,14 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.348} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.006} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.030} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.03} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.056} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.043} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.030} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.03} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.012} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.006} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.104} \hspace{0pt}\huxbpad{0pt}} &
@@ -375,7 +337,8 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI coverage} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Coverage} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 4.3\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 90.1\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 76\%} \hspace{0pt}\huxbpad{0pt}} &
@@ -393,14 +356,15 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\multirow[c]{-5}{*}[0ex]{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \rotatebox{90}{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=2000}}} \hspace{0pt}\huxbpad{0pt}}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.136} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.260} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.26} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.416} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.539} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.215} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.532} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.100} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.1} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.258} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.418} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.539} \hspace{0pt}\huxbpad{0pt}} &
@@ -408,7 +372,7 @@ RF refers to random forest with 200 trees and a minimum node size of 1, and CF d
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.533} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
+\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
 \arrayrulecolor{black}
 \end{tabular}
 \end{threeparttable}\par\end{centerbox}

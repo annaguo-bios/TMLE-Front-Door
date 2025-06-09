@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  17 OCT 2024 10:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  2 JUN 2025 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -464,7 +464,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
+(Font)              <6> on input line 53.
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./ATT_
@@ -473,20 +473,20 @@ Package rerunfilecheck Info: File `ATT_table.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15177 strings out of 476025
- 304124 string characters out of 5790017
- 1964388 words of memory out of 5000000
- 35459 multiletter control sequences out of 15000+600000
- 514619 words of font info for 40 fonts, out of 8000000 for 9000
+ 15180 strings out of 476025
+ 304163 string characters out of 5790017
+ 1953388 words of memory out of 5000000
+ 35461 multiletter control sequences out of 15000+600000
+ 515337 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,77p,343b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,16n,77p,372b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on ATT_table.pdf (1 page, 70896 bytes).
+Output written on ATT_table.pdf (1 page, 69179 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream

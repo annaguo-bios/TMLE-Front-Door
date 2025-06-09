@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  17 OCT 2024 18:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  2 JUN 2025 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -398,7 +398,7 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box68
 )
-No file ATT_table.aux.
+(./ATT_table.aux)
 \openout1 = `ATT_table.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -424,6 +424,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count298
@@ -454,17 +455,22 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 21.
 Package hyperref Info: Link coloring OFF on input line 21.
+ (./ATT_table.out) (./ATT_table.out)
 \@outlinefile=\write3
 \openout3 = `ATT_table.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 37.
+(Font)              <7> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 37.
+(Font)              <5> on input line 35.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 43.
+(Font)              size <6> substituted on input line 41.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/it' in size <6.5> not available
+(Font)              size <6> substituted on input line 50.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <6.5> not available
@@ -472,47 +478,47 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <6.5> not available
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 61.
+(Font)              size <6> substituted on input line 62.
 
-LaTeX Font Info:    Calculating math sizes for size <6.5> on input line 62.
+LaTeX Font Info:    Calculating math sizes for size <6.5> on input line 63.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.54997> not available
-(Font)              size <5> substituted on input line 62.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.25> not available
-(Font)              size <5> substituted on input line 62.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
-(Font)              size <6> substituted on input line 62.
+(Font)              size <6> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.54997> not available
-(Font)              size <5> substituted on input line 62.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.25> not available
-(Font)              size <5> substituted on input line 62.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 62.
+(Font)              size <6> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.54997> not available
-(Font)              size <5> substituted on input line 62.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.25> not available
-(Font)              size <5> substituted on input line 62.
+(Font)              size <5> substituted on input line 63.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.5> on input line 62.
+(Font)              <6.5> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.54997> on input line 62.
+(Font)              <4.54997> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <3.25> on input line 62.
+(Font)              <3.25> on input line 63.
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -521,23 +527,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.75pt have occurred.
 
-
-Package rerunfilecheck Warning: File `ATT_table.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ATT_table.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `ATT_table.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15185 strings out of 476025
- 304272 string characters out of 5790017
- 1971388 words of memory out of 5000000
- 35473 multiletter control sequences out of 15000+600000
- 514619 words of font info for 40 fonts, out of 8000000 for 9000
+ 15195 strings out of 476025
+ 304412 string characters out of 5790017
+ 1961388 words of memory out of 5000000
+ 35476 multiletter control sequences out of 15000+600000
+ 515337 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,77p,470b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,16n,77p,372b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
@@ -545,7 +545,7 @@ r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on ATT_table.pdf (1 page, 84692 bytes).
+Output written on ATT_table.pdf (1 page, 84239 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream

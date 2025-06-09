@@ -213,33 +213,32 @@ table1 <- as_hux(dat) %>%
   merge_cells(3, 7:8) %>%
   merge_cells(3, 9:10) %>%
   merge_cells(3, 11:12) %>%
-  insert_row("","","","","","","","","","","","", after = 4) %>% 
-  insert_row("","","","","","","","","","","","", after = 10) %>% 
-  insert_row("","","","","","","","","","","","", after = 16) %>% 
-  insert_column(c("","","","","n=500","Bias","SD","MSE","CI coverage","CI width","n=1000","Bias","SD","MSE","CI coverage","CI width","n=2000","Bias","SD","MSE","CI coverage","CI width"), after = 0) %>%
+  insert_column(c("","","","","Bias","SD","MSE","Coverage","CI width","Bias","SD","MSE","Coverage","CI width","Bias","SD","MSE","Coverage","CI width"), after = 0) %>%
+  insert_column(c("","","","","n=500","","","","","n=1000","","","","","n=2000","","","",""), after = 0) %>%
+  merge_cells(5:9, 1) %>% 
+  merge_cells(10:14, 1) %>% 
+  merge_cells(15:19, 1) %>%
+  set_valign(c(5,10,15), col=1,"middle") %>% 
+  set_rotation(c(5,10,15), 1, 90) %>% 
   set_escape_contents(3, 1:ncol(.), FALSE) %>%
   set_align(col=1, everywhere, "left") %>%
+  set_number_format(everywhere,everywhere, "%s") %>% 
   set_align(col=2:ncol(.),everywhere,"center") %>%
   set_all_padding(0)  %>% 
   set_bold(1, everywhere) %>%
-  set_bold(c(5,11,17), everywhere) %>%
+  set_bold(everywhere, 1) %>%
   set_italic(2,everywhere) %>%
-  set_bottom_border(row = 1, col =2:ncol(.)) %>% 
-  set_bottom_border(row = 4, col =2:ncol(.)) %>% 
-  set_bottom_border(row = 2, col =2:ncol(.)) %>% 
-  set_right_border(5:nrow(.), 3, brdr(0.6,"double")) %>%
-  set_right_border(5:nrow(.), 5, brdr(0.4,"solid")) %>%
-  set_right_border(5:nrow(.), 7, brdr(0.6,"double")) %>%
-  set_right_border(5:nrow(.), 9, brdr(0.6,"double")) %>%
-  set_right_border(5:nrow(.), 11, brdr(0.4,"solid")) %>%
-  # insert_row(c("Note: Number of simulations=1000. \\(\\psi^{1,2}(\\hat{Q}^*)\\) refer to TMLE estimators and \\(\\psi^{1,2}_{+}(\\hat{Q})\\) refer to the corresponding Onestep estimators. Lin. Reg refers to linear regression, RF refers to random forest with 50 trees and a minimum node size of 1, and CR denotes random forest with cross fitting using 5 folds.","","","","","","","","","","","","","","","","","",""), after = nrow(.)) %>%
-  # merge_cells(nrow(.),1:ncol(.)) %>% 
-  # set_row_height(everywhere, rep(0.02/nrow(.),nrow(.))) %>%
+  set_bottom_border(row = 1, col =3:ncol(.)) %>% 
+  set_bottom_border(row = 4, col =3:ncol(.)) %>% 
+  set_bottom_border(row = 2, col =3:ncol(.)) %>% 
+  set_right_border(5:nrow(.), 4, brdr(0.6,"double")) %>%
+  set_right_border(5:nrow(.), 6, brdr(0.4,"solid")) %>%
+  set_right_border(5:nrow(.), 8, brdr(0.6,"double")) %>%
+  set_right_border(5:nrow(.), 10, brdr(0.6,"double")) %>%
+  set_right_border(5:nrow(.), 12, brdr(0.4,"solid")) %>%
   set_top_border(row=1,col=everywhere,brdr(1, "solid")) %>% set_bottom_border(row = nrow(.),col = everywhere,brdr(1, "solid")) %>%
   set_font_size(6.5) %>% set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>% 
-  set_caption("Comparative analysis for the impact of cross-fitting on TMLEs and one-step estimators in conjunction with the use of random forests.
-RF refers to random forest with 500 trees and a minimum node size of 5 for a continuous
-variable and 1 for binary, and CF denotes random forest with cross fitting using 5 folds.") %>% set_col_width(1/14*c(2,rep(1,12)))
+  set_caption("Impact of cross-fitting on TMLE and one-step ATE estimators using random forests (RF: 500 trees; min node size = 5 for continuous, 1 for binary; CF: 5-fold cross-fitting).") %>% set_col_width(1/14*c(2,rep(1,12)))
 
 table1
 quick_latex(table1, file='ATT_table.tex')

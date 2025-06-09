@@ -25,27 +25,27 @@ nsim <- 1000
 load("../DGPs/6-truth-binaryM-binaryZ.Rdata")
 
 ## tmle====
-load("TMLE/result.Rdata")
-p.z1.tmle <- plot.tmle(r'($\psi(\hat{Q}^*;z=1)$)',z="z1")
-p.z0.tmle <- plot.tmle(r'($\psi(\hat{Q}^*;z=0)$)',z="z0")
-p.all.z.tmle <- plot.tmle(r'($\psi(\hat{Q}^*;Z)$)',z="all.z")
-p.opt.tmle <- plot.tmle(r'($\psi(\hat{Q}^*;z=1)$)',z="opt.linear")
+# load("TMLE/result.Rdata")
+# p.z1.tmle <- plot.tmle(r'($\psi_1(\hat{Q}^*;\\ z=1)$)',z="z1")
+# p.z0.tmle <- plot.tmle(r'($\psi_1(\hat{Q}^*;z=0)$)',z="z0")
+# p.all.z.tmle <- plot.tmle(r'($\psi_1(\hat{Q}^*;Z)$)',z="all.z")
+# p.opt.tmle <- plot.tmle(r'($\psi_1(\hat{Q}^*;z=1)$)',z="opt.linear")
 
 ## onestep====
 load("Onestep/result.Rdata")
-p.z1.one <- plot.tmle(r'($\psi^{+}(\hat{Q};z=1)$)',z="z1")
-p.z0.one <- plot.tmle(r'($\psi^{+}(\hat{Q};z=0)$)',z="z0")
-p.all.z.one <- plot.tmle(r'($\psi^{+}(\hat{Q};Z)$)',z="all.z")
-p.opt.one <- plot.tmle(r'($\psi^{+}(\hat{Q};z_{opt})$)',z="opt.linear")
+p.z1.one <- plot.tmle(r'($\psi_{z^*=1}^{+}(\hat{Q})$)',z="z1",samplesize.label=F)
+p.z0.one <- plot.tmle(r'($\psi_{z^*=0}^{+}(\hat{Q})$)',z="z0",samplesize.label=F)
+p.all.z.one <- plot.tmle(r'($\psi_1^{+}(\hat{Q};\ Z)$)',z="all.z")
+p.opt.one <- plot.tmle(r'($\psi_{\alpha_{opt}}^{+}(\hat{Q})$)',z="opt.linear")
 
-
-p.tmle <- plot_grid(
-  p.z0.tmle,p.z1.tmle,p.all.z.tmle,p.opt.tmle,
-  align = "v", ncol = 1
-)
+# 
+# p.tmle <- plot_grid(
+#   p.z0.tmle,p.z1.tmle,p.all.z.tmle,p.opt.tmle,
+#   align = "v", ncol = 1
+# )
 
 p.one <- plot_grid(
-  p.z0.one,p.z1.one,p.all.z.one,p.opt.one,
+  p.z0.one,p.z1.one,p.opt.one,
   align = "v", ncol = 1
 )
 
@@ -57,5 +57,5 @@ p.one,
 )
 
 
-ggsave("plot.pdf", plot = p.final, width = 8, height = 18, units = "in")
-
+ggsave("plot.pdf", plot = p.final, width = 8, height = 16, units = "in")
+ggsave("sim6-binary.pdf", plot = p.final, width = 8, height = 16, units = "in")

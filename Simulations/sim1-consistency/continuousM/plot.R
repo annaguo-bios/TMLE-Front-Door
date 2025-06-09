@@ -110,15 +110,15 @@ p.con.est1.dnorm <- plot.tmle(r'($\psi_1(\hat{Q}^*)$ - dnorm)')
 
 ## continuous-est2 ====
 load("TMLE-est2a/ATT_result.Rdata")
-p.con.est2 <- plot.tmle(r'($\psi_{2a}(\hat{Q}^*)$)')
+p.con.est2 <- plot.tmle(r'($\psi_{a}(\hat{Q}^*)$)')
 
 ## continuous-est2-dnorm ====
 load("TMLE-est2-dnorm/ATT_result.Rdata")
-p.con.est2.dnorm <- plot.tmle(r'($\psi_{2}(\hat{Q}^*)$ - dnorm)')
+p.con.est2.dnorm <- plot.tmle(r'($\psi(\hat{Q}^*)$ - dnorm)')
 
 ## continuous-est3 ====
 load("TMLE-est2b/ATT_result.Rdata")
-p.con.est3 <- plot.tmle(r'($\psi_{2b}(\hat{Q}^*)$)')
+p.con.est3 <- plot.tmle(r'($\psi_{b}(\hat{Q}^*)$)')
 
 ## continuous-onestep-np ====
 load("Onestep-est1/ATT_result.Rdata")
@@ -126,7 +126,7 @@ p.con.1np <- plot.tmle(r'($\psi_1^{+}(\hat{Q})$)')
 
 ## continuous-onestep-dnorm-sr ====
 load("Onestep-est2-dnorm/ATT_result.Rdata")
-p.con.1dnorm.sr <- plot.tmle(r'($\psi_{2}^{+}(\hat{Q})$ - dnorm)')
+p.con.1dnorm.sr <- plot.tmle(r'($\psi^{+}(\hat{Q})$ - dnorm)')
 
 ## continuous-onestep-dnorm ====
 load("Onestep-est1-dnorm/ATT_result.Rdata")
@@ -134,12 +134,12 @@ p.con.1dnorm <- plot.tmle(r'($\psi_1^{+}(\hat{Q})$ - dnorm)')
 
 ## continuous-onestep-densratio ====
 load("Onestep-est2a/ATT_result.Rdata")
-p.con.1densratio <- plot.tmle(r'($\psi_{2a}^{+}(\hat{Q})$)')
+p.con.1densratio <- plot.tmle(r'($\psi_{a}^{+}(\hat{Q})$)')
 
 ## continuous-onestep-bayes ====
 load("Onestep-est2b/result.Rdata")
-p.con.1bayes <- plot.tmle(r'($\psi_{2b}^{+}(\hat{Q})$)')
-
+p.con.1bayes <- plot.tmle(r'($\psi_{b}^{+}(\hat{Q})$)')
+library(cowplot)
 p.con1 <- plot_grid(
   p.con.est1
   ,p.con.est1.dnorm

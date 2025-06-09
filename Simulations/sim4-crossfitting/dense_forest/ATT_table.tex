@@ -30,35 +30,36 @@
 \begin{centerbox}
 \begin{threeparttable}
 \captionsetup{justification=centering,singlelinecheck=off}
-\caption{Comparative analysis for the impact of cross-fitting on TMLEs and one-step estimators in conjunction with the use of random forests.
-RF refers to random forest with 500 trees and a minimum node size of 5 for a continuous
-variable and 1 for binary, and CF denotes random forest with cross fitting using 5 folds.}
+\caption{Impact of cross-fitting on TMLE and one-step ATE estimators using random forests (RF: 500 trees; min node size = 5 for continuous, 1 for binary; CF: 5-fold cross-fitting).}
  \setlength{\tabcolsep}{0pt}
-\begin{tabular}{l l l l l l l l l l l l l}
+\begin{tabular}{l l l l l l l l l l l l l l}
 
 
-\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
+\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
 \arrayrulecolor{black}
 
 \multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{6}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont TMLEs}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{6}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont One-step estimators}} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textit{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }}} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Binary}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{4}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Continuous}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Binary}} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{4}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textit{{\fontsize{6.5pt}{7.8pt}\selectfont Univariate Continuous}} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont \(\psi_1(\hat{Q}^\star)\)} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont \(\psi_{2a}(\hat{Q}^\star)\)} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{2}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont \(\psi_{2b}(\hat{Q}^\star)\)} \hspace{0pt}\huxbpad{0pt}} &
@@ -70,7 +71,8 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont } \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont RF} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CF} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont RF} \hspace{0pt}\huxbpad{0pt}} &
@@ -85,47 +87,31 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CF} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
+\hhline{>{\huxb{255, 255, 255}{0.4}}->{\huxb{255, 255, 255}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}->{\huxb{0, 0, 0}{0.4}}-}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=500}} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
-
-
-\hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
-\arrayrulecolor{black}
-
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.513} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.033} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.100} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.1} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.311} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.205} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.030} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.03} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.471} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.038} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.557} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.328} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.210} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.21} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.057} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.260} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.26} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.142} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.238} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.429} \hspace{0pt}\huxbpad{0pt}} &
@@ -142,25 +128,27 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.331} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.021} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.066} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.280} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.080} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.28} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.08} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.098} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.265} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.019} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.457} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.249} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.066} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.110} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.11} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI coverage} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Coverage} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 34.8\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 84.5\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 97.3\%} \hspace{0pt}\huxbpad{0pt}} &
@@ -178,7 +166,8 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\multirow[c]{-5}{*}[0ex]{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \rotatebox{90}{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=500}}} \hspace{0pt}\huxbpad{0pt}}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.828} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.413} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 1.108} \hspace{0pt}\huxbpad{0pt}} &
@@ -196,31 +185,14 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=1e+03}} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
-
-
-\hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
-\arrayrulecolor{black}
-
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.507} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.029} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.148} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.161} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.199} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.020} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.02} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.463} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.031} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.432} \hspace{0pt}\huxbpad{0pt}} &
@@ -232,9 +204,10 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.186} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.100} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.1} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.148} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.237} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.143} \hspace{0pt}\huxbpad{0pt}} &
@@ -243,22 +216,23 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.097} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.247} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.259} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.110} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.11} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.247} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.292} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.011} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.044} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.082} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.060} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.06} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.057} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.237} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.010} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.01} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.247} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.131} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.057} \hspace{0pt}\huxbpad{0pt}} &
@@ -268,7 +242,8 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI coverage} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Coverage} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 13.7\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 88.7\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 93.3\%} \hspace{0pt}\huxbpad{0pt}} &
@@ -286,8 +261,9 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.590} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\multirow[c]{-5}{*}[0ex]{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \rotatebox{90}{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=1000}}} \hspace{0pt}\huxbpad{0pt}}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.59} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.329} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.722} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.709} \hspace{0pt}\huxbpad{0pt}} &
@@ -304,25 +280,8 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=2e+03}} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} \textbf{{\fontsize{6.5pt}{7.8pt}\selectfont }} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
-
-
-\hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
-\arrayrulecolor{black}
-
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Bias} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.508} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.024} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.129} \hspace{0pt}\huxbpad{0pt}} &
@@ -333,14 +292,15 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.024} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.397} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.256} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.200} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont -0.2} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.057} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont SD} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.129} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.075} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.097} \hspace{0pt}\huxbpad{0pt}} &
@@ -358,13 +318,14 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont MSE} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.274} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.006} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.026} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.056} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.041} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.030} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.03} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.224} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.006} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.181} \hspace{0pt}\huxbpad{0pt}} &
@@ -376,7 +337,8 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI coverage} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont Coverage} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 1.1\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 89.6\%} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 84.6\%} \hspace{0pt}\huxbpad{0pt}} &
@@ -394,13 +356,14 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \hhline{>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.6}}||>{\huxb{0, 0, 0}{0.4}}|}
 \arrayrulecolor{black}
 
-\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}l!{\huxvb{0, 0, 0}{0}}}{\multirow[c]{-5}{*}[0ex]{\huxtpad{0pt + 1em}\raggedright \hspace{0pt} \rotatebox{90}{\textbf{{\fontsize{6.5pt}{7.8pt}\selectfont n=2000}}} \hspace{0pt}\huxbpad{0pt}}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont CI width} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.421} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.254} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.454} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.4}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.528} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.235} \hspace{0pt}\huxbpad{0pt}} &
-\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.520} \hspace{0pt}\huxbpad{0pt}} &
+\multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.52} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.422} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0.6}}!{\huxvb{0, 0, 0}{0.6}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.253} \hspace{0pt}\huxbpad{0pt}} &
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.456} \hspace{0pt}\huxbpad{0pt}} &
@@ -409,7 +372,7 @@ variable and 1 for binary, and CF denotes random forest with cross fitting using
 \multicolumn{1}{c!{\huxvb{0, 0, 0}{0}}}{\huxtpad{0pt + 1em}\centering \hspace{0pt} {\fontsize{6.5pt}{7.8pt}\selectfont 0.521} \hspace{0pt}\huxbpad{0pt}} \tabularnewline[-0.5pt]
 
 
-\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
+\hhline{>{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}->{\huxb{0, 0, 0}{1}}-}
 \arrayrulecolor{black}
 \end{tabular}
 \end{threeparttable}\par\end{centerbox}

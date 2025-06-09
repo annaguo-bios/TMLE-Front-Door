@@ -11,7 +11,7 @@ superlearner=as.logical(args[6]) # whether to use superlearner or not
 # seed=1
 # m=0
 # estimator='AIPW'
-# dgp.f.name='fd_admg1'
+# dgp.f.name='nonfd_admg2'
 # R=5
 
 
@@ -59,15 +59,18 @@ parametric_dual_weights <- function(dt, a=1){
 
 parametric_primal_weights <- function(dt,Y.family,SL=F){
   
-  A.family <- binomial(link = "logit")
+  if(dgp.f.name=='nonfd_admg2'){A.family <- binomial(link = "identity")}else{A.family <- binomial(link = "logit")}
+  # A.family <- binomial(link = "logit")
   
   # E[Y|M,A,Z,X]
   if(SL){
+    
     or_fit <- SuperLearner(Y=dt$Y, X=dt[,c('M','A','Z','X')], family = Y.family,SL.library = lib)
     EY <- predict(or_fit)[[1]] %>% as.vector()
     EY.a1 <- predict(or_fit, newdata=dt %>% mutate(A=1))[[1]] %>% as.vector()
     EY.a0 <- predict(or_fit, newdata=dt %>% mutate(A=0))[[1]] %>% as.vector()
     model.Y <- or_fit
+    
   }else{
     
     model.Y <- glm(Y ~ M+A+Z+X, family = Y.family, data = dt)
@@ -107,7 +110,7 @@ parametric_primal_weights <- function(dt,Y.family,SL=F){
 satisfies_fd <- ifelse(dgp.f.name %in% c('fd_admg1', 'fd_admg2'), TRUE, FALSE) # record whether the DGP randomly selected satisfies the FD assumption
 
 # generate data
-dt = get(dgp.f.name)(n)
+data = get(dgp.f.name)(n)
 
 #################################################
 # weight-based TEST
@@ -117,8 +120,8 @@ dt = get(dgp.f.name)(n)
 Y.family <- gaussian(link = "identity")
 
 # derive primal and dual weights
-dual_weights <- parametric_dual_weights(dt, a=A.level)
-primal_weights <- parametric_primal_weights(dt,Y.family,superlearner)
+dual_weights <- parametric_dual_weights(data, a=A.level)
+primal_weights <- parametric_primal_weights(data,Y.family,superlearner)
 
 # Function to perform permutation test for conditional independence
 permutation_test_YZ <- function(dt, n_permutations = 1000, w, Y.family,SL) {
@@ -195,7 +198,7 @@ permutation_test_YZ <- function(dt, n_permutations = 1000, w, Y.family,SL) {
 }
 
 # Run the permutation test
-p.test <- permutation_test_YZ(dt, 
+p.test <- permutation_test_YZ(data, 
                               n_permutations = 100, 
                               w = primal_weights$w, 
                               Y.family = Y.family,
@@ -207,7 +210,7 @@ cat("P-value:", p.test$p.value, "\n")
 cat("Interpretation: Y", ifelse(p.test$p.value < 0.05, "is NOT", "may be"), 
     "independent of Z given X and M\n")
 
-d.test <- permutation_test_YZ(dt, 
+d.test <- permutation_test_YZ(data, 
                               n_permutations = 100, 
                               w = dual_weights$w, 
                               Y.family = Y.family,

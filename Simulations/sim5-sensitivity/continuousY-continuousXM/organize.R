@@ -11,7 +11,7 @@ nsim=as.integer(args[3]) # require specifying number of simulations, e.g. nsim <
 
 alpha <- 0.05 # significant level
 
-n.vec <- c(500,1000,2000,4000,10000)
+n.vec <- c(500,1000,2000,4000)
 
 # #################################################
 # # record results - CATE based

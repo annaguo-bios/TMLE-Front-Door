@@ -1,5 +1,5 @@
 # sample size
-n.vec <- c(500,1000,2000,4000,10000)
+n.vec <- c(500,1000,2000,3000)
 
 # number of simulations
 nsim <- 200
@@ -19,11 +19,19 @@ for (estimator in estimators){
       
       for (t in 1:nsim){ # number of simulations
         
-        job <- paste0("Rscript main.R ",n.vec[i]," ",t," ",estimator," ",m," ", R," ","T")
+        N <- n.vec[i]
+        
+        if (m %in% c('nonfd_admg1','nonfd_admg2')){
+          
+          t <- t+nsim
+          
+        }
+        
+        job <- paste0("Rscript main.R ",N," ",t," ",estimator," ",m," ", R," ","T")
         
         joblist <- c(joblist,job)
         
-        job <- paste0("Rscript main.R ",n.vec[i]," ",t," ",estimator," ",m," ", R," ","F")
+        job <- paste0("Rscript main.R ",N," ",t," ",estimator," ",m," ", R," ","F")
         
         joblist <- c(joblist,job)
       }

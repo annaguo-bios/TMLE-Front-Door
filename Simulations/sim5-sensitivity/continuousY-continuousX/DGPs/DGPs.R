@@ -217,10 +217,6 @@ nonfd_admg2 <- function(num_samples, sd.X=1,sd.Y=1) {
   Abeta_Z <- -1.1
   Abeta_U1 <- 1.3
   Abeta_X <- 0.5
-  Abeta_U1Z <- -1.75
-  Abeta_U1X <- 1.2
-  Abeta_ZX <- 1.5
-  Abeta_U1ZX <- -1.8
  
   A <- rbinom(num_samples, 1, plogis(Abeta_intercept + Abeta_Z * Z + Abeta_U1 * U1 + Abeta_X * X))
   
@@ -229,10 +225,6 @@ nonfd_admg2 <- function(num_samples, sd.X=1,sd.Y=1) {
   Mbeta_A <- -1
   Mbeta_Z <- 1.1
   Mbeta_X <- -0.5
-  Mbeta_AZ <- 1.25
-  Mbeta_AX <- -1.5
-  Mbeta_ZX <- 1.5
-  Mbeta_AZX <- -1.7
   
  
   
@@ -244,17 +236,6 @@ nonfd_admg2 <- function(num_samples, sd.X=1,sd.Y=1) {
   Ybeta_A <- 1.5
   Ybeta_X <- 0.5
   Ybeta_U1 <- 0.2
-  Ybeta_MA <- -1.2
-  Ybeta_MX <- 0.5
-  Ybeta_MU1 <- 0.3
-  Ybeta_AX <- -1
-  Ybeta_AU1 <- 0.5
-  Ybeta_XU1 <- -0.5
-  Ybeta_MAX <- 0.5
-  Ybeta_MAU1 <- -0.5
-  Ybeta_MXU1 <- 0.2
-  Ybeta_AXU1 <- -0.5
-  Ybeta_MAXU1 <- 1
 
   
   

@@ -1,11 +1,11 @@
 SL.glm: Wrapper for generalized linear models via glm().
 
-SL.earth: Multivariate Adaptive Regression Splines [I guess]
+SL.earth: Multivariate Adaptive Regression Splines.
 
 SL.ranger: Ranger is a fast implementation of Random Forest (Breiman 2001) or recursive partitioning, particularly suited for high dimensional data.
 
 SL.xgboost: XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification, and ranking problems.
 
-SL.bayesglm: Bayesian generalized linear models
+SL.mean: Intercept only regression
 
 SL.gam: Generalized Additive Models

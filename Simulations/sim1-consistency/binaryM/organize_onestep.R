@@ -149,6 +149,11 @@ for (i in seq_along(n.vec)){
   for (t in 1:nsim){
 
     load(paste0(out.path,prefix,"output_",n,"_",t,".Rdata"))
+    
+    if(exists('tmle_output_Y1.T')){tmle_output_Y1 <- tmle_output_Y1.T}
+    if(exists('tmle_output_Y1.F')){tmle_output_Y1 <- tmle_output_Y1.F}
+    if(exists('tmle_output_Y0.T')){tmle_output_Y0 <- tmle_output_Y0.T}
+    if(exists('tmle_output_Y0.F')){tmle_output_Y0 <- tmle_output_Y0.F}
 
     # record bias
     bias_matrix_Y1[t,i] <- hat_E.Y1 - E.Y1

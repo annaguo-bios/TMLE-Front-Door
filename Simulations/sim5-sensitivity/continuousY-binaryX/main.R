@@ -10,7 +10,7 @@ R=as.integer(args[5]) # number of bootstrap samples
 # seed=1
 # m=0
 # estimator='AIPW'
-# dgp.f.name='fd_admg1'
+# dgp.f.name='nonfd_admg2'
 # R=5
 
 

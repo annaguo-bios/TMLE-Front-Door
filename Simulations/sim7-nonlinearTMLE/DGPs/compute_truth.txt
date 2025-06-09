@@ -1,0 +1,35 @@
+############################# ATE #################################
+## For the binary mediator
+Rscript compute_truth.R 1-truth-binary.R 1-dgp-binary.R 1-truth-binary.Rdata 100000
+
+
+## For the continuous mediator
+Rscript compute_truth.R 1-truth-continuous.R 1-dgp-continuous.R 1-truth-continuous.Rdata 100000
+
+
+## For the multivariate mediator - D2
+Rscript compute_truth.R 1-truth-multi-d2.R 1-dgp-multi-d2.R 1-truth-mult-d2.Rdata 100000
+
+
+## For the multivariate mediator - D4
+Rscript compute_truth.R 1-truth-multi-d4.R 1-dgp-multi-d4.R 1-truth-mult-d4.Rdata 100000
+
+############################# ATT #################################
+## For the binary mediator
+Rscript compute_truth.R 1-truth-binary-ATT.R 1-dgp-binary.R 1-truth-binary-ATT.Rdata 10000000
+
+
+## For the continuous mediator
+Rscript compute_truth.R 1-truth-continuous-ATT.R 1-dgp-continuous.R 1-truth-continuous-ATT.Rdata 10000000
+
+
+## For the multivariate mediator - D2
+Rscript compute_truth.R 1-truth-multi-d2-ATT.R 1-dgp-multi-d2.R 1-truth-multi-d2-ATT.Rdata 10000000
+
+
+## For the multivariate mediator - D4
+Rscript compute_truth.R 1-truth-multi-d4-ATT.R 1-dgp-multi-d4.R 1-truth-multi-d4-ATT.Rdata 10000000
+
+
+
+

@@ -1,0 +1,12 @@
+Rscript organize_TMLE.R TMLE-est2a/output/ TMLE-est2a/result.Rdata 3 1000 ../DGPs/1-truth-continuous.Rdata
+Rscript organize_onestep.R Onestep-est2a/output/ Onestep-est2a/result.Rdata 3 1000 ../DGPs/1-truth-continuous.Rdata
+Rscript organize_TMLE.R TMLE-est2b/output/ TMLE-est2b/result.Rdata 3 1000 ../DGPs/1-truth-continuous.Rdata
+Rscript organize_onestep.R Onestep-est2b/output/ Onestep-est2b/result.Rdata 3 1000 ../DGPs/1-truth-continuous.Rdata
+Rscript organize_TMLE.R TMLE-est2-dnorm/output/ TMLE-est2-dnorm/result.Rdata 3 1000 ../DGPs/1-truth-continuous.Rdata T
+Rscript organize_onestep.R Onestep-est2-dnorm/output/ Onestep-est2-dnorm/result.Rdata 3 1000 ../DGPs/1-truth-continuous.Rdata T
+Rscript organize_TMLE.R TMLE-est2a/output/ TMLE-est2a/ATT_result.Rdata 3 1000 ../DGPs/1-truth-continuous-ATT.Rdata T
+Rscript organize_onestep.R Onestep-est2a/output/ Onestep-est2a/ATT_result.Rdata 3 1000 ../DGPs/1-truth-continuous-ATT.Rdata T
+Rscript organize_TMLE.R TMLE-est2b/output/ TMLE-est2b/ATT_result.Rdata 3 1000 ../DGPs/1-truth-continuous-ATT.Rdata T
+Rscript organize_onestep.R Onestep-est2b/output/ Onestep-est2b/ATT_result.Rdata 3 1000 ../DGPs/1-truth-continuous-ATT.Rdata T
+Rscript organize_TMLE.R TMLE-est2-dnorm/output/ TMLE-est2-dnorm/ATT_result.Rdata 3 1000 ../DGPs/1-truth-continuous-ATT.Rdata T
+Rscript organize_onestep.R Onestep-est2-dnorm/output/ Onestep-est2-dnorm/ATT_result.Rdata 3 1000 ../DGPs/1-truth-continuous-ATT.Rdata T

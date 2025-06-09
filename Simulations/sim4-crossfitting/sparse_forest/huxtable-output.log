@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.29)  14 DEC 2023 01:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  2 JUN 2025 21:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -460,61 +460,65 @@ Package hyperref Info: Link coloring OFF on input line 21.
 \openout3 = `huxtable-output.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 36.
+(Font)              <7> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 36.
+(Font)              <5> on input line 35.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 42.
+(Font)              size <6> substituted on input line 41.
 
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <6.5> not available
+LaTeX Font Warning: Font shape `OT1/cmr/bx/it' in size <6.5> not available
 (Font)              size <6> substituted on input line 50.
 
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 60.
+LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <6.5> not available
+(Font)              size <6> substituted on input line 51.
 
-LaTeX Font Info:    Calculating math sizes for size <6.5> on input line 61.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
+(Font)              size <6> substituted on input line 62.
+
+LaTeX Font Info:    Calculating math sizes for size <6.5> on input line 63.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.54997> not available
-(Font)              size <5> substituted on input line 61.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.25> not available
-(Font)              size <5> substituted on input line 61.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
-(Font)              size <6> substituted on input line 61.
+(Font)              size <6> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.54997> not available
-(Font)              size <5> substituted on input line 61.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.25> not available
-(Font)              size <5> substituted on input line 61.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 61.
+(Font)              size <6> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.54997> not available
-(Font)              size <5> substituted on input line 61.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.25> not available
-(Font)              size <5> substituted on input line 61.
+(Font)              size <5> substituted on input line 63.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.5> on input line 61.
+(Font)              <6.5> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.54997> on input line 61.
+(Font)              <4.54997> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <3.25> on input line 61.
+(Font)              <3.25> on input line 63.
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -527,13 +531,13 @@ Package rerunfilecheck Info: File `huxtable-output.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15191 strings out of 476025
- 304458 string characters out of 5790017
- 1971388 words of memory out of 5000000
- 35473 multiletter control sequences out of 15000+600000
- 514619 words of font info for 40 fonts, out of 8000000 for 9000
+ 15195 strings out of 476025
+ 304514 string characters out of 5790017
+ 1961388 words of memory out of 5000000
+ 35476 multiletter control sequences out of 15000+600000
+ 515337 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,77p,433b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,16n,77p,428b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
@@ -541,7 +545,7 @@ r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb>
-Output written on huxtable-output.pdf (1 page, 84485 bytes).
+Output written on huxtable-output.pdf (1 page, 83915 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream

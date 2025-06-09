@@ -208,38 +208,79 @@ library(huxtable)
 library(dplyr)
 options(scipen = 999)
 
+# table1 <- as_hux(dat) %>% 
+#   insert_row("Univariate Binary","","Univariate Continuous","","","","","","Bivariate Continuous","","","", after = 0) %>% 
+#   merge_cells(1, 1:2) %>% 
+#   merge_cells(1, 3:8) %>% 
+#   merge_cells(1, 9:12) %>% 
+#   insert_row("\\(\\psi_1(\\hat{Q}^\\star)\\)","\\(\\psi_1^{+}(\\hat{Q})\\)","\\(\\psi_1(\\hat{Q}^\\star)\\)","\\(\\psi_1^{+}(\\hat{Q})\\)","\\(\\psi_{2a}(\\hat{Q}^\\star)\\)","\\(\\psi_{2a}^{+}(\\hat{Q})\\)","\\(\\psi_{2b}(\\hat{Q}^\\star)\\)","\\(\\psi_{2b}^{+}(\\hat{Q})\\)","\\(\\psi_{2a}(\\hat{Q}^\\star)\\)","\\(\\psi_{2a}^{+}(\\hat{Q})\\)","\\(\\psi_{2b}(\\hat{Q}^\\star)\\)","\\(\\psi_{2b}^{+}(\\hat{Q})\\)", after = 1) %>% 
+#   insert_row("","","","","","","","","","","","",after=2) %>%
+#   insert_row("","","","","","","","","","","","",after=8) %>%
+#   insert_row("","","","","","","","","","","","",after=14) %>%
+#   insert_column(c("","","n=500","Bias","SD","MSE","Coverage","CI width","n=1000","Bias","SD","MSE","Coverage","CI width","n=2000","Bias","SD","MSE","Coverage","CI width"), after = 0) %>%
+#   set_escape_contents(2, 1:ncol(.), FALSE) %>%
+#   set_number_format(everywhere,everywhere, "%s") %>% 
+#   set_align(col=1, everywhere, "left") %>%
+#   set_align(col=2:ncol(.),everywhere,"center") %>%
+#   set_tb_padding(1, everywhere, 0) %>% 
+#   set_bold(1, everywhere) %>%
+#   set_bold(c(3,9,15), everywhere) %>%
+#   set_italic(2,everywhere) %>%
+#   set_bottom_border(row = 1, col =2:ncol(.)) %>% 
+#   set_bottom_border(row = 2, col =2:ncol(.)) %>% 
+#   set_right_border(3:nrow(.), 3, brdr(0.4,"double")) %>%
+#   set_right_border(3:nrow(.), 5, brdr(0.4,"dotted")) %>%
+#   set_right_border(3:nrow(.), 7, brdr(0.4,"dotted")) %>%
+#   set_right_border(3:nrow(.), 9, brdr(0.4,"double")) %>%
+#   set_right_border(3:nrow(.), 11, brdr(0.4,"dotted")) %>%
+#   # insert_row(paste0("Note: Number of simulations=1000. \\(\\psi^{1,2,3}(\\hat{Q}^*)\\) refer to TMLE estimators and \\(\\psi^{1,2,3}_{+}(\\hat{Q})\\) refer to the corresponding onestep estimators."),"","","","","","","","","","","","", after = nrow(.)) %>%
+#   # merge_cells(nrow(.),1:ncol(.)) %>% 
+#   set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>%
+#   set_top_border(row=1,col=everywhere,brdr(1, "solid")) %>% set_bottom_border(row = nrow(.),col = everywhere,brdr(1, "solid")) %>%
+#   set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>% set_caption("Comparison between TMLEs and one-step estimators for ATE under positivity assumption violation with binary, continuous, and multivariate mediators.") %>%
+#   set_all_padding(1) %>% set_font_size(6) 
+
 table1 <- as_hux(dat) %>% 
   insert_row("Univariate Binary","","Univariate Continuous","","","","","","Bivariate Continuous","","","", after = 0) %>% 
   merge_cells(1, 1:2) %>% 
   merge_cells(1, 3:8) %>% 
   merge_cells(1, 9:12) %>% 
   insert_row("\\(\\psi_1(\\hat{Q}^\\star)\\)","\\(\\psi_1^{+}(\\hat{Q})\\)","\\(\\psi_1(\\hat{Q}^\\star)\\)","\\(\\psi_1^{+}(\\hat{Q})\\)","\\(\\psi_{2a}(\\hat{Q}^\\star)\\)","\\(\\psi_{2a}^{+}(\\hat{Q})\\)","\\(\\psi_{2b}(\\hat{Q}^\\star)\\)","\\(\\psi_{2b}^{+}(\\hat{Q})\\)","\\(\\psi_{2a}(\\hat{Q}^\\star)\\)","\\(\\psi_{2a}^{+}(\\hat{Q})\\)","\\(\\psi_{2b}(\\hat{Q}^\\star)\\)","\\(\\psi_{2b}^{+}(\\hat{Q})\\)", after = 1) %>% 
-  insert_row("","","","","","","","","","","","",after=2) %>%
-  insert_row("","","","","","","","","","","","",after=8) %>%
-  insert_row("","","","","","","","","","","","",after=14) %>%
-  insert_column(c("","","n=500","Bias","SD","MSE","CI coverage","CI width","n=1000","Bias","SD","MSE","CI coverage","CI width","n=2000","Bias","SD","MSE","CI coverage","CI width"), after = 0) %>%
+  # insert_row("","","","","","","","","","","","",after=2) %>%
+  # insert_row("","","","","","","","","","","","",after=8) %>%
+  # insert_row("","","","","","","","","","","","",after=14) %>%
+  insert_column(c("","","Bias","SD","MSE","Coverage","CI width","Bias","SD","MSE","Coverage","CI width","Bias","SD","MSE","Coverage","CI width"), after = 0) %>%
+  insert_column(c("","","n=500","","","","","n=1000","","","","","n=2000","","","",""), after = 0) %>%
+  merge_cells(3:7, 1) %>% 
+  merge_cells(8:12, 1) %>% 
+  merge_cells(13:17, 1) %>%
+  set_valign(c(3,8,13), col=1,"middle") %>% 
+  set_rotation(c(3,8,13), 1, 90) %>% 
   set_escape_contents(2, 1:ncol(.), FALSE) %>%
-  set_align(col=1, everywhere, "left") %>%
-  set_align(col=2:ncol(.),everywhere,"center") %>%
-  set_tb_padding(1, everywhere, 0) %>% 
-  set_bold(1, everywhere) %>%
-  set_bold(c(3,9,15), everywhere) %>%
+  set_number_format(everywhere,everywhere, "%s") %>% 
+  set_align(col=1:2, everywhere, "left") %>%
+  set_align(col=3:ncol(.),everywhere,"center") %>%
+  set_align(col=1, row=c(3,8,13), "center") %>%
+  # set_tb_padding(1, everywhere, 0) %>% 
+  set_bold(everywhere, 1) %>%
+  # set_bold(c(3,9,15), everywhere) %>%
   set_italic(2,everywhere) %>%
   set_bottom_border(row = 1, col =2:ncol(.)) %>% 
   set_bottom_border(row = 2, col =2:ncol(.)) %>% 
-  set_right_border(3:nrow(.), 3, brdr(0.4,"double")) %>%
-  set_right_border(3:nrow(.), 5, brdr(0.4,"dotted")) %>%
-  set_right_border(3:nrow(.), 7, brdr(0.4,"dotted")) %>%
-  set_right_border(3:nrow(.), 9, brdr(0.4,"double")) %>%
-  set_right_border(3:nrow(.), 11, brdr(0.4,"dotted")) %>%
-  # insert_row(paste0("Note: Number of simulations=1000. \\(\\psi^{1,2,3}(\\hat{Q}^*)\\) refer to TMLE estimators and \\(\\psi^{1,2,3}_{+}(\\hat{Q})\\) refer to the corresponding onestep estimators."),"","","","","","","","","","","","", after = nrow(.)) %>%
-  # merge_cells(nrow(.),1:ncol(.)) %>% 
+  set_right_border(3:nrow(.), 4, brdr(0.4,"double")) %>%
+  set_right_border(3:nrow(.), 6, brdr(0.4,"dotted")) %>%
+  set_right_border(3:nrow(.), 8, brdr(0.4,"dotted")) %>%
+  set_right_border(3:nrow(.), 10, brdr(0.4,"double")) %>%
+  set_right_border(3:nrow(.), 12, brdr(0.4,"dotted")) %>%
+  # set_bottom_border(row = 7, col =3:ncol(.), brdr(0.4,"dashed")) %>%
+  # set_bottom_border(row = 12, col =3:ncol(.), brdr(0.4,"dashed")) %>%
+  # set_right_border(3:nrow(.), 1, brdr(0.4,"dashed")) %>%
   set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>%
   set_top_border(row=1,col=everywhere,brdr(1, "solid")) %>% set_bottom_border(row = nrow(.),col = everywhere,brdr(1, "solid")) %>%
-  set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>% set_caption("Comparison between TMLE estimators and one-step EIF estimator under positivity assumption violation with binary, continuous, and multivariate mediators.") %>%
-  set_all_padding(1) %>% set_font_size(6) 
+  set_escape_contents(nrow(.), 1:ncol(.), FALSE) %>% set_caption("Comparison of TMLE and one-step ATE estimators under weak overlap across mediator types.") %>%
+  set_all_padding(-1) %>% set_font_size(6) 
 
 table1
-quick_latex(table1)
-y
+quick_latex(table1, file='table.tex')
+
 
