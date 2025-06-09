@@ -4,7 +4,7 @@
 library(scales)
 library(boot)
 library(dplyr)
-library(fdtmle)
+library(fdcausal)
 library(mice)
 library(flexCausal)
 # Due to data sharing constraints, we are unable to provide direct access to the raw data used for the real data analysis presented in this study. 
