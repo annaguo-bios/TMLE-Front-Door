@@ -74,7 +74,7 @@ A summary of the functionality of commonly used files is provided below.
 
 ## Real data application
 
-Utilizing our front-door estimation framework, we analyzed the impact of Mobile Stroke Unit (MSU) dispatch on patients’ functional outcomes using data from the Berlin prehospital stroke care trial (B_PROUD).
+Utilizing our front-door estimation framework, we analyzed the impact of Mobile Stroke Unit (MSU) dispatch on patients’ functional outcomes using data from the [Berlin prehospital stroke care trial (B_PROUD)](ClinicalTrials.gov), under identifier: NCT02869386.
 
 
 
