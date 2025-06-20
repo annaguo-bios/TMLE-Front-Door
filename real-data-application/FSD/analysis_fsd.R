@@ -6,13 +6,12 @@ library(boot)
 library(dplyr)
 library(fdcausal)
 library(mice)
-library(flexCausal)
 # Due to data sharing constraints, we are unable to provide direct access to the raw data used for the real data analysis presented in this study. 
 # However, the dataset is available for application through the Finnish Social Science Data Archive at 
 # https://services.fsd.tuni.fi/catalogue/FSD2076?tab=variables&lang=en&study_language=en. 
 
 dat <- read.csv2("data.csv") # data for analysis
-
+dat <- read.csv2('/Users/apple/Library/CloudStorage/Dropbox/Front-door_Anna/data/FSD2076/Study/Data/daF2076.csv')
 # subset variables of potential interests
 dat <- dat[,c("t3","bv4_1","ktu32","t10","t11","t12","t13","t14","l16","l17","k70","k71","k72","k73","k74",
               "k75","k76","k77","koulu7_1","koulu1","koulu4","koulu7_2","koulu7_9","ktu19","ktu31a_4","ktu31a11","ktu31a28","ktu31a29","k102")]
@@ -75,26 +74,42 @@ dt1 <- mice(dt1, m=1)
 dt1 <- complete(dt1,1) %>% mutate(A=ifelse(grade_6yr>median(grade_6yr),1,0), highest_edu=factor(ifelse(highest_edu<6,0,1), levels=0:1,label=c("No","Yes")),
                                   len_unemp=factor(ifelse(len_unemp<=2,0,1),levels=0:1,label=c("No","Yes")))
 
+set.seed(7)
 sixth.est3.SL <- TMLE(a=c(1,0),data=dt1,treatment="A", mediators=c("highest_edu","len_of_edu","age_start_highedu","num_field","edu_field","qual_job","len_unemp","age_work"),
-                      outcome="income2000", covariates=c("family.income","totalITPA_10","sex","age1991"), onestep=T, mediator.method="bayes",superlearner = T, crossfit = T,K=5,
+                      outcome="income2000", covariates=c("family.income","totalITPA_10","sex","age1991"), estimator=c('onestep','tmle'), mediator.method="bayes",superlearner = T, crossfit = T,K=5,
                       lib = c("SL.glm", "SL.earth", "SL.ranger", "SL.mean","SL.xgboost"))
 
-# set.seed(7)
-# tmp <- ADMGtmle(a=c(1,0),data=dt1,vertices=c('A','income2000','X','M'),treatment="A", outcome="income2000",
-#          multivariate.variables = list(M=c("highest_edu","len_of_edu","age_start_highedu","num_field","edu_field","qual_job","len_unemp","age_work"),
-#                                        X=c("family.income","totalITPA_10","sex","age1991")),
-#          bi_edges = list(c("A","income2000")),
-#          di_edges = list(c("X","A"),c("X","M"),c("X","income2000"), c('A','M'), c('M','income2000')),
-#          superlearner.seq = F,
-#          superlearner.Y = T,
-#          superlearner.A = T,
-#          superlearner.M = T,
-#          superlearner.L = T,
-#          lib.seq = c("SL.glm", "SL.earth", "SL.ranger", "SL.mean","SL.xgboost"),
-#          lib.L = c("SL.glm", "SL.earth", "SL.ranger", "SL.mean","SL.xgboost"),
-#          lib.M = c("SL.glm", "SL.earth", "SL.ranger", "SL.mean","SL.xgboost"),
-#          lib.Y = c("SL.glm", "SL.earth", "SL.ranger", "SL.mean","SL.xgboost"),
-#          lib.A = c("SL.glm", "SL.earth", "SL.ranger", "SL.mean","SL.xgboost"))
-# 
-# save(list = c("tmp"), file="/Users/apple/Desktop/estimation.Rdata")
+## TMLE
+piie_a1 <- mean(dt1$income2000) - sixth.est3.SL$TMLE.Y1$estimated_psi # PIIE, a=1, point estimate
+piie_a1_ci.upper <- mean(dt1$income2000) - sixth.est3.SL$TMLE.Y1$estimated_psi + 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$TMLE.Y1$EIF}^2)/nrow(dt1)) # PIIE, a=1, upper 95% CI
+piie_a1_ci.lower <-mean(dt1$income2000) - sixth.est3.SL$TMLE.Y1$estimated_psi - 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$TMLE.Y1$EIF}^2)/nrow(dt1)) # PIIE, a=1, lower 95% CI
+
+cat('\\texteuro{}',round(-piie_a1,2),' (95\\% CI: \\texteuro{}',round(-piie_a1_ci.upper,2), ',\\texteuro{}',round(-piie_a1_ci.lower,2),')',sep = "")
+
+piie_a0 <-mean(dt1$income2000) - sixth.est3.SL$TMLE.Y0$estimated_psi # PIIE, a=0, point estimate
+piie_a0_ci.upper <- mean(dt1$income2000) - sixth.est3.SL$TMLE.Y0$estimated_psi + 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$TMLE.Y0$EIF}^2)/nrow(dt1)) # PIIE, a=0, upper 95% CI
+piie_a0_ci.lower <-mean(dt1$income2000) - sixth.est3.SL$TMLE.Y0$estimated_psi - 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$TMLE.Y0$EIF}^2)/nrow(dt1)) # PIIE, a=0, lower 95% CI
+
+cat('\\texteuro{}',round(piie_a0,2),' (95\\% CI: \\texteuro{}',round(piie_a0_ci.lower,2), '\\texteuro{}',round(piie_a0_ci.upper,2),')',sep = "")
+
+TMLE.piie <- list(piie_a1, piie_a1_ci.upper, piie_a1_ci.lower,
+                   piie_a0, piie_a0_ci.upper, piie_a0_ci.lower)
+
+## Onestep
+piie_a1 <- mean(dt1$income2000) - sixth.est3.SL$Onestep.Y1$estimated_psi # PIIE, a=1, point estimate
+piie_a1_ci.upper <- mean(dt1$income2000) - sixth.est3.SL$Onestep.Y1$estimated_psi + 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$Onestep.Y1$EIF}^2)/nrow(dt1)) # PIIE, a=1, upper 95% CI
+piie_a1_ci.lower <-mean(dt1$income2000) - sixth.est3.SL$Onestep.Y1$estimated_psi - 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$Onestep.Y1$EIF}^2)/nrow(dt1)) # PIIE, a=1, lower 95% CI
+
+cat('\\texteuro{}',round(-piie_a1,2),' (95\\% CI: \\texteuro{}',round(-piie_a1_ci.upper,2), ',\\texteuro{}',round(-piie_a1_ci.lower,2),')',sep = "")
+
+piie_a0 <-mean(dt1$income2000) - sixth.est3.SL$Onestep.Y0$estimated_psi # PIIE, a=0, point estimate
+piie_a0_ci.upper <- mean(dt1$income2000) - sixth.est3.SL$Onestep.Y0$estimated_psi + 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$Onestep.Y0$EIF}^2)/nrow(dt1)) # PIIE, a=0, upper 95% CI
+piie_a0_ci.lower <-mean(dt1$income2000) - sixth.est3.SL$Onestep.Y0$estimated_psi - 1.96*sqrt(mean({(dt1$income2000 - mean(dt1$income2000)) - sixth.est3.SL$Onestep.Y0$EIF}^2)/nrow(dt1)) # PIIE, a=0, lower 95% CI
+
+cat('\\texteuro{}',round(piie_a0,2),' (95\\% CI: \\texteuro{}',round(piie_a0_ci.lower,2), '\\texteuro{}',round(piie_a0_ci.upper,2),')',sep = "")
+
+Onestep.piie <- list(piie_a1, piie_a1_ci.upper, piie_a1_ci.lower,
+                   piie_a0, piie_a0_ci.upper, piie_a0_ci.lower)
+
 save(list = c("sixth.est3.SL"), file="estimation.Rdata")
+save(list = c("TMLE.piie", "Onestep.piie","sixth.est3.SL"), file="FSD/estimation_v2.Rdata")
